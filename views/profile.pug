@@ -1,0 +1,391 @@
+doctype html
+html 
+  head
+    block head 
+      meta(charset='UTF-8')
+      meta(name='viewport' content='width=device-width, initial-scale=1.0')
+      title GPTDAO | Leading the way to innovation
+      style
+        include ./css/style.css
+        include ./css/footer.css
+        include ./css/profile.css
+      link(rel='stylesheet' href='/css/style.css')
+      link(rel='stylesheet' href='/css/profile.css')
+      link(rel='stylesheet' href='/css/footer.css')
+      link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css')
+      script(src='/../../script.js')
+      script(src='/../../profile.js')
+      link(rel='shortcut icon' type='image/png' href='img/favicon.png')
+      link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:300,300i,700')
+        
+  body(data-alert=`${alert ? alert : ''}`)
+
+    include _header
+
+      //CONTENT
+    block content
+    header
+    main
+      
+      h2.personal Personal Information
+      .grid-2-cols
+        section#basic-info.container-profile
+          .profile-image
+              img(src="/images/38.png", alt="User Profile Image")
+              span + 
+              label(for='profile-image' class='change-image') Change Profile Picture
+          .username
+            p#username Username
+          .name-email-container
+            .name
+              p#user-name John Doe
+              button(type='button' class='modify-name btn') Modify
+            .email
+              p#user-email johndoe@example.com
+              button(type='button' class='modify-email btn') Modify
+          #personal-info.container-profile
+          form.user-personal-info
+            .bio
+              textarea(name='bio', id='bio', rows='5', cols='50', placeholder='Bio...')
+            
+            
+          .social-media
+            .twitter
+              label(class="socials",for='twitter-handle') Twitter
+              input(type='text', id='twitter-handle', name='twitter', placeholder='Enter your Twitter handle')
+            .linkedin
+              label(class="socials",for='linkedin-url') LinkedIn
+              input(type='text', id='linkedin-url', name='linkedin', placeholder='Enter your LinkedIn URL')
+
+            .crypto-wallet
+              label(class="socials",for='crypto-wallet') Crypto Wallet Address
+              input(type='text', id='crypto-wallet', name='crypto-wallet', placeholder='Enter your crypto wallet address')
+
+        section#settings.container-profile
+          h2.h2-settings Settings
+          form#settings-form
+            .settings-form-content
+              .profile-visibility
+                label(for='profile-visibility') Profile Visibility
+                select(class="btn", id='profile-visibility', name='profile-visibility')
+                  option(value='public') Public
+                  option(value='private') Private
+                  option(value='connections') Connections Only
+
+              .notification-preferences
+                label(for='email-notifications') Email Notifications
+                input#email-notifications(type='checkbox', name='email-notifications')
+
+                label(for='push-notifications') Push Notifications
+                input#push-notifications(type='checkbox', name='push-notifications')
+
+                label(for='sms-notifications') SMS Notifications
+                input#sms-notifications(type='checkbox', name='sms-notifications')
+
+              .privacy-settings
+                label(for='data-sharing') Data Sharing with Third Parties
+                input#data-sharing(type='checkbox', name='data-sharing')
+
+              .language-settings
+                label(for='language') Language
+                select(class="btn", id='language', name='language')
+                  option(value='en') English
+                  option(value='es') Español
+                  option(value='fr') Français
+                  option(value='de') Deutsch
+                  option(value='zh') 中文
+
+              .time-zone-settings
+                label(for='time-zone') Time Zone
+                select(class="btn", id='time-zone', name='time-zone')
+                  option(value='utc') Coordinated Universal Time (UTC)
+                  // Add more time zones here
+
+              .theme-appearance-settings
+                label(for='theme') Theme
+                select(class="btn", id='theme', name='theme')
+                  option(value='light') Light
+                  option(value='dark') Dark
+
+              .account-security
+                h3 Account Security
+                a(href='/change-password') Change Password
+
+              .data-export-deletion
+                h3 Data Export and Deletion
+                a(href='/export-data') Export Data
+                a(href='/delete-account') Delete Account
+            .settings-form-button
+              button(type='submit', class='btn btn-save-settings') Save Settings
+        .governance-container
+              
+          .governance-feature
+            h3 Current DAO Balance
+            p.current-balance 0.123 BTC
+            h3 View Financial Reports
+            button.view-reports-btn View Reports
+          .governance-feature
+            h3 Proposals
+            div#proposals-container
+              div#table-container
+                table#proposal-table.proposal-table
+                  thead
+                    tr
+                      th Date
+                      th Proposal Name
+                      th Voting Percentage
+                      th Status
+                      th
+                  tbody#proposal-tbody-container
+                    tr.proposal-row
+                      td.date 01/01/2023
+                      td.proposal-name
+                        a(href='#') Proposal 1
+                      td.voting-percentage 70%
+                      td.status Active
+                      td.vote-cell
+                        button.vote-btn Vote
+                    tr.proposal-row
+                      td.date 01/02/2023
+                      td.proposal-name
+                        a(href='#') Proposal 2
+                      td.voting-percentage 40%
+                      td.status Expired
+                      td.vote-cell
+                        button.vote-btn.disabled Vote
+                    tr.proposal-row
+                      td.date 01/03/2023
+                      td.proposal-name
+                        a(href='#') Proposal 3
+                      td.voting-percentage 90%
+                      td.status Active
+                      td.vote-cell
+                        button.vote-btn Vote
+                    tr.proposal-row
+                      td.date 01/01/2023
+                      td.proposal-name
+                        a(href='#') Proposal 1
+                      td.voting-percentage 70%
+                      td.status Active
+                      td.vote-cell
+                        button.vote-btn Vote
+                    tr.proposal-row
+                      td.date 01/02/2023
+                      td.proposal-name
+                        a(href='#') Proposal 2
+                      td.voting-percentage 40%
+                      td.status Expired
+                      td.vote-cell
+                        button.vote-btn.disabled Vote
+                    tr.proposal-row
+                      td.date 01/03/2023
+                      td.proposal-name
+                        a(href='#') Proposal 3
+                      td.voting-percentage 90%
+                      td.status Active
+                      td.vote-cell
+                        button.vote-btn Vote
+                    tr.proposal-row
+                      td.date 01/01/2023
+                      td.proposal-name
+                        a(href='#') Proposal 1
+                      td.voting-percentage 70%
+                      td.status Active
+                      td.vote-cell
+                        button.vote-btn Vote
+                    tr.proposal-row
+                      td.date 01/02/2023
+                      td.proposal-name
+                        a(href='#') Proposal 2
+                      td.voting-percentage 40%
+                      td.status Expired
+                      td.vote-cell
+                        button.vote-btn.disabled Vote
+                    tr.proposal-row
+                      td.date 01/03/2023
+                      td.proposal-name
+                        a(href='#') Proposal 3
+                      td.voting-percentage 90%
+                      td.status Active
+                      td.vote-cell
+                        button.vote-btn Vote
+              div#create-proposal-container
+                button.create-proposal-btn Create Proposal
+
+        section#user-activity.container-profile
+          h2#h2-user-activity User Activity
+          .activity-list
+            ul.activity-list
+              li.activity-item
+                span.activity-date 02/01/2023
+                span.activity-icon
+                  i.fas.fa-heart
+                span.activity-title Liked a proposal
+                a.activity-link(href="#") View activity
+              li.activity-item
+                span.activity-date 02/15/2023
+                span.activity-icon
+                  i.fas.fa-share-alt
+                span.activity-title Shared a course
+                a.activity-link(href="#") View activity
+              li.activity-item
+                span.activity-date 03/01/2023
+                span.activity-icon
+                  i.fas.fa-graduation-cap
+                span.activity-title Enrolled in a course
+                a.activity-link(href="#") View activity
+              li.activity-item
+                span.activity-date 03/15/2023
+                span.activity-icon
+                  i.fas.fa-plus-square
+                span.activity-title Created a proposal
+                a.activity-link(href="#") View activity
+              li.activity-item
+                span.activity-date 03/25/2023
+                span.activity-icon
+                  i.fas.fa-tasks
+                span.activity-title Completed a project
+                a.activity-link(href="#") View activity
+              li.activity-item
+                span.activity-date 04/01/2023
+                span.activity-icon
+                  i.fas.fa-gift
+                span.activity-title Received a reward
+                a.activity-link(href="#") View activity
+              //- Add more activity items as needed
+
+            .activity-pagination
+              a.activity-pagination-btn(href="#") Load more
+
+.overlay
+div#reports-modal.reports-modal
+  div.modal-content
+    span.close-modal-btn &times;
+    h1 Financial Report of the DAO
+    select#report-month
+      option(value="jan") January
+      option(value="feb") February
+      option(value="mar") March
+    div.report-section
+      h2 Revenue
+      div.report-subsection
+        h3 Token Sales
+        p.sale-details Number of tokens sold: 1000
+        p.sale-details Price per token: $10
+      
+        p.expense-details Total cost: $3500
+      div.report-total
+        h3 Total Expenses: $24,250
+    div.report-section
+      h2 Profit/Loss
+      div.report-total
+        h3 Total Revenue: $12,500
+        h3 Total Expenses: $24,250
+        h3 Total Profit/Loss: -$11,750
+    div.button-section
+      button.ok-button Ok
+    //- script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js')
+    //- script(src='/js/mapbox.js')
+    //- script(src='/js/login.js')
+div.overlay
+.modal#create-proposal-modal
+  .modal-dialog.modal-lg
+    .modal-content.proposal-modal
+      .modal-header
+        h5.modal-title Create New Proposal
+        button.close(type="button" data-dismiss="modal" aria-label="Close")
+          span(aria-hidden="true") &times;
+      .modal-body
+        form#create-proposal-form
+          .form-section
+            .form-element
+              label(for="proposal-type") Proposal Type
+              select#proposal-type.form-control(required)
+                option(value="") Select a proposal type
+                option(value="company") Company
+                option(value="investment") Investment
+                option(value="learning-opportunity") Learning Opportunity
+                option(value="software") Software
+                option(value="invention") Invention
+                // Add more options as needed
+            .form-element
+              label(for="proposal-title") Title
+              input#proposal-title.form-control(type="text" placeholder="Enter proposal title" required)
+            .form-element
+              label(for="proposal-description") Description
+              textarea#proposal-description.form-control(rows="3" placeholder="Enter proposal description" required)
+          .form-section
+            .form-element
+              label(for="proposal-audience") Target Audience
+              input#proposal-audience.form-control(type="text" placeholder="Enter target audience")
+            .form-element
+              label(for="proposal-status") Current Status
+              select#proposal-status.form-control(required)
+                option(value="") Select current status
+                option(value="idea") Idea
+                option(value="in-progress") In Progress
+                option(value="completed") Completed
+          .form-section
+            .form-element
+              label(for="proposal-kpi") Key Performance Indicators (KPIs)
+              textarea#proposal-kpi.form-control(rows="3" placeholder="Enter KPIs to measure success")
+            .form-element
+              label(for="proposal-risks") Risks and Challenges
+              textarea#proposal-risks.form-control(rows="3" placeholder="Enter risks and challenges")
+          .form-section
+            .form-element
+              label(for="proposal-dependencies") Dependencies
+              textarea#proposal-dependencies.form-control(rows="3" placeholder="Enter dependencies")
+            .form-element
+              label(for="proposal-ownership") Ownership and Governance Structure
+              textarea#proposal-ownership.form-control(rows="3" placeholder="Enter ownership and governance structure")
+          .form-section
+            .form-element
+              label(for="proposal-ip") Intellectual Property Rights and Licensing
+              textarea#proposal-ip.form-control(rows="3" placeholder="Enter intellectual property rights and licensing information")
+            .form-element
+              label(for="proposal-nda") Confidentiality or Non-Disclosure Agreement Requirements
+              textarea#proposal-nda.form-control(rows="3" placeholder="Enter confidentiality or non-disclosure agreement requirements")
+          .form-section
+            .form-element
+              label(for="proposal-social-impact") Social Impact
+              textarea#proposal-social-impact.form-control(rows="3" placeholder="Enter social impact or environmental considerations")
+            .form-element
+              label(for="proposal-diversity") Diversity and Inclusion Policies
+              textarea#proposal-diversity.form-control(rows="3" placeholder="Enter diversity and inclusion policies")
+          .form-section
+            .form-element
+              label(for="proposal-attachments") Attachments
+              input#proposal-attachments.form-control(type="file" multiple)
+            .form-element
+              label(for="proposal-link") Link 
+              input#proposal-link.form-control(type="url" placeholder="Enter a link to more information")
+          .form-section
+            .form-element
+              label(for="proposal-budget") Budget (ETH)
+                input#proposal-budget.form-control(type="number" min="0" step="0.01" placeholder="Enter budget in ETH")
+        .modal-footer
+          button.btn.btn-submit(type="submit") Submit Proposal
+          button.btn.btn-cancel(type="button" data-dismiss="modal") Cancel
+div.overlay
+.modal#cancel-confirmation-modal
+  .modal-dialog.modal-sm
+    .modal-content
+      .modal-header
+        h5.modal-title Cancel Confirmation
+      .modal-body
+        p Are you sure you want to cancel? All information will be lost.
+      .modal-footer
+        button.btn.btn-confirm(type="button") OK
+        button.btn.btn-deny(type="button") Cancel
+
+
+
+include _footer
+    //- script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js')
+    //- script(src='/js/mapbox.js')
+    //- script(src='/js/login.js')
+include _footer
+    //- script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js')
+    //- script(src='/js/mapbox.js')
+    //- script(src='/js/login.js')

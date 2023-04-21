@@ -1,0 +1,2645 @@
+[
+  {
+    "title": "What is the structure of an HTML document and how to create a basic HTML template?"
+  },
+  {
+    "title": "How to use HTML tags for creating headings"
+  },
+  {
+    "title": "How to use semantic HTML for better accessibility and SEO?"
+  },
+  {
+    "title": "What are HTML entities and how to use them for special characters?"
+  },
+  {
+    "title": "What is CSS and how to use it for styling web pages?"
+  },
+  {
+    "title": "What are the different ways of using CSS in HTML?"
+  },
+  {
+    "title": "How to use CSS selectors for targeting HTML elements?"
+  },
+  {
+    "title": "How to use CSS properties for changing the appearance of HTML elements?"
+  },
+  {
+    "title": "How to use CSS units for specifying size"
+  },
+  {
+    "title": "How to use CSS colors for creating color schemes?"
+  },
+  {
+    "title": "How to use CSS typography for creating readable text?"
+  },
+  {
+    "title": "How to use CSS layout for arranging HTML elements?"
+  },
+  {
+    "title": "How to use CSS grid for creating complex layouts?"
+  },
+  {
+    "title": "How to use CSS flexbox for creating responsive layouts?"
+  },
+  {
+    "title": "How to use CSS media queries for targeting different devices?"
+  },
+  {
+    "title": "How to use CSS animations and transitions for adding interactivity?"
+  },
+  {
+    "title": "What are design principles and how to use them for creating beautiful web pages?"
+  },
+  {
+    "title": "How to use contrast for creating visual hierarchy?"
+  },
+  {
+    "title": "How to use repetition for creating consistency?"
+  },
+  {
+    "title": "How to use alignment for creating balance?"
+  },
+  {
+    "title": "How to use proximity for creating relationships?"
+  },
+  {
+    "title": "How to use whitespace for creating breathing room?"
+  },
+  {
+    "title": "How to use color for creating emotion?"
+  },
+  {
+    "title": "How to use typography for creating personality?"
+  },
+  {
+    "title": "How to use imagery for creating interest?"
+  },
+  {
+    "title": "How to use patterns for creating texture?"
+  },
+  {
+    "title": "How to use shape for creating form?"
+  },
+  {
+    "title": "What are design patterns and how to use them for creating common layouts?"
+  },
+  {
+    "title": "How to use the header/footer pattern for creating consistent navigation?"
+  },
+  {
+    "title": "How to use the hero pattern for creating impactful content?"
+  },
+  {
+    "title": "How to use the card pattern for displaying information?"
+  },
+  {
+    "title": "How to use the grid pattern for creating flexible layouts?"
+  },
+  {
+    "title": "How to use the sidebar pattern for providing additional content?"
+  },
+  {
+    "title": "How to use the form pattern for collecting user input?"
+  },
+  {
+    "title": "How to use the modal pattern for displaying content in a popup?"
+  },
+  {
+    "title": "What are design tools and how to use them for creating web designs?"
+  },
+  {
+    "title": "How to use Adobe Photoshop for creating mockups and visual designs?"
+  },
+  {
+    "title": "How to use Adobe Illustrator for creating vector graphics and logos?"
+  },
+  {
+    "title": "How to use Sketch for creating user interfaces and wireframes?"
+  },
+  {
+    "title": "How to use Figma for creating collaborative designs and prototypes?"
+  },
+  {
+    "title": "How to use Canva for creating social media graphics and marketing materials?"
+  },
+  {
+    "title": "How to use InVision for creating interactive prototypes and animations?"
+  },
+  {
+    "title": "How to use Zeplin for exporting designs and specs to developers?"
+  },
+  {
+    "title": "How to use Webflow for creating responsive designs without coding?"
+  },
+  {
+    "title": "How to use WordPress for creating websites with themes and plugins?"
+  },
+  {
+    "title": "What are the best practices for web design and development?"
+  },
+  {
+    "title": "How to optimize web pages for speed and performance?"
+  },
+  {
+    "title": "How to use SEO for improving search engine rankings?"
+  },
+  {
+    "title": "How to use web analytics for tracking user behavior and insights?"
+  },
+  {
+    "title": "What are the best practices for responsive web design?"
+  },
+  {
+    "title": "How to use media queries for creating adaptive layouts?"
+  },
+  {
+    "title": "How to use responsive images for optimizing image size and quality?"
+  },
+  {
+    "title": "How to use responsive typography for adapting to different screen sizes?"
+  },
+  {
+    "title": "How to use responsive tables for displaying tabular data on small screens?"
+  },
+  {
+    "title": "How to use mobile-first design for prioritizing content on small screens?"
+  },
+  {
+    "title": "How to use accessibility for improving usability for people with disabilities?"
+  },
+  {
+    "title": "How to use HTML5 semantics for creating accessible and SEO-friendly web pages?"
+  },
+  {
+    "title": "How to use ARIA for adding accessibility features to HTML elements?"
+  },
+  {
+    "title": "How to use color contrast for improving readability and accessibility?"
+  },
+  {
+    "title": "How to use keyboard navigation for allowing users to navigate without a mouse?"
+  },
+  {
+    "title": "How to use screen readers for testing and improving accessibility?"
+  },
+  {
+    "title": "What are the best practices for web typography?"
+  },
+  {
+    "title": "How to use web fonts for customizing typography on the web?"
+  },
+  {
+    "title": "How to use font pairing for creating complementary typefaces?"
+  },
+  {
+    "title": "How to use line height for improving readability and legibility?"
+  },
+  {
+    "title": "How to use font size for creating a hierarchy of information?"
+  },
+  {
+    "title": "How to use font weight for creating emphasis and contrast?"
+  },
+  {
+    "title": "How to use font style for creating emphasis and mood?"
+  },
+  {
+    "title": "How to use letter spacing and kerning for improving legibility and style?"
+  },
+  {
+    "title": "What are the best practices for web color?"
+  },
+  {
+    "title": "How to use color theory for creating effective color schemes?"
+  },
+  {
+    "title": "How to use color contrast for improving readability and accessibility?"
+  },
+  {
+    "title": "How to use color psychology for creating emotion and meaning?"
+  },
+  {
+    "title": "How to use color palettes for creating consistent and harmonious designs?"
+  },
+  {
+    "title": "What are the best practices for web layout?"
+  },
+  {
+    "title": "How to use grid systems for creating flexible and responsive layouts?"
+  },
+  {
+    "title": "How to use whitespace for creating balance and hierarchy?"
+  },
+  {
+    "title": "How to use alignment for creating structure and clarity?"
+  },
+  {
+    "title": "How to use proximity for creating relationships and context?"
+  },
+  {
+    "title": "How to use flow for guiding the user's attention and interaction?"
+  },
+  {
+    "title": "How to use visual hierarchy for prioritizing information and actions?"
+  },
+  {
+    "title": "What are the best practices for web graphics?"
+  },
+  {
+    "title": "How to use SVG for creating scalable vector graphics on the web?"
+  },
+  {
+    "title": "How to use image optimization for reducing file size and improving performance?"
+  },
+  {
+    "title": "How to use iconography for creating memorable and recognizable symbols?"
+  },
+  {
+    "title": "How to use infographics for visualizing complex information and data?"
+  },
+  {
+    "title": "How to use illustrations for creating unique and engaging designs?"
+  },
+  {
+    "title": "What are the best practices for web animation and interactivity?"
+  },
+  {
+    "title": "How to use CSS animation for creating subtle and engaging effects?"
+  },
+  {
+    "title": "How to use JavaScript for creating dynamic and interactive web pages?"
+  },
+  {
+    "title": "How to use UI patterns for creating intuitive and efficient interfaces?"
+  },
+  {
+    "title": "How to use microinteractions for creating delightful and memorable experiences?"
+  },
+  {
+    "title": "What are the best practices for web content?"
+  },
+  {
+    "title": "How to use content strategy for creating valuable and relevant content?"
+  },
+  {
+    "title": "How to use copywriting for communicating effectively and persuasively?"
+  },
+  {
+    "title": "How to use storytelling for engaging and inspiring audiences?"
+  },
+  {
+    "title": "How to use SEO for optimizing content for search engines?"
+  },
+  {
+    "title": "How to use user research for understanding and meeting user needs?"
+  },
+  {
+    "title": "What are the trends and innovations in web design and development?"
+  },
+  {
+    "title": "Create a \"Hello"
+  },
+  {
+    "title": "Use console.log() to print a message to the console."
+  },
+  {
+    "title": "Declare a variable and assign it a value."
+  },
+  {
+    "title": "Print the value of a variable to the console."
+  },
+  {
+    "title": "Use the typeof operator to check the type of a variable."
+  },
+  {
+    "title": "Use arithmetic operators to perform a calculation."
+  },
+  {
+    "title": "Create a function that takes two arguments and returns their sum."
+  },
+  {
+    "title": "Use if/else statements to conditionally execute code."
+  },
+  {
+    "title": "Create an array and access its elements."
+  },
+  {
+    "title": "Use a for loop to iterate over an array."
+  },
+  {
+    "title": "Use a while loop to repeatedly execute code."
+  },
+  {
+    "title": "Create an object and access its properties."
+  },
+  {
+    "title": "Use a for...in loop to iterate over an object's properties."
+  },
+  {
+    "title": "Use the Date object to get the current date and time."
+  },
+  {
+    "title": "Use the Math object to perform mathematical operations."
+  },
+  {
+    "title": "Use string concatenation to combine two strings."
+  },
+  {
+    "title": "Use the substring() method to extract a portion of a string."
+  },
+  {
+    "title": "Use the length property to get the length of a string or array."
+  },
+  {
+    "title": "Use the push() method to add an element to an array."
+  },
+  {
+    "title": "Use the pop() method to remove an element from an array."
+  },
+  {
+    "title": "Use the shift() method to remove the first element from an array."
+  },
+  {
+    "title": "Use the unshift() method to add an element to the beginning of an array."
+  },
+  {
+    "title": "Use the slice() method to extract a portion of an array."
+  },
+  {
+    "title": "Use the splice() method to add or remove elements from an array."
+  },
+  {
+    "title": "Use the reverse() method to reverse the order of elements in an array."
+  },
+  {
+    "title": "Use the sort() method to sort the elements of an array."
+  },
+  {
+    "title": "Use the concat() method to concatenate two arrays."
+  },
+  {
+    "title": "Use the indexOf() method to find the index of an element in an array."
+  },
+  {
+    "title": "Use the join() method to join the elements of an array into a string."
+  },
+  {
+    "title": "Use the toString() method to convert an array to a string."
+  },
+  {
+    "title": "Use the toUpperCase() method to convert a string to uppercase."
+  },
+  {
+    "title": "Use the toLowerCase() method to convert a string to lowercase."
+  },
+  {
+    "title": "Use the replace() method to replace a portion of a string with another string."
+  },
+  {
+    "title": "Use the trim() method to remove whitespace from the beginning and end of a string."
+  },
+  {
+    "title": "Use the Math.random() method to generate a random number."
+  },
+  {
+    "title": "Use the Math.floor() method to round a number down to the nearest integer."
+  },
+  {
+    "title": "Use the Math.ceil() method to round a number up to the nearest integer."
+  },
+  {
+    "title": "Use the Math.round() method to round a number to the nearest integer."
+  },
+  {
+    "title": "Use the isNaN() function to check if a value is not a number."
+  },
+  {
+    "title": "Use the parseInt() function to convert a string to an integer."
+  },
+  {
+    "title": "Use the parseFloat() function to convert a string to a floating-point number."
+  },
+  {
+    "title": "Use the setTimeout() function to delay the execution of code."
+  },
+  {
+    "title": "Use the setInterval() function to repeatedly execute code at a set interval."
+  },
+  {
+    "title": "Use the document.getElementById() method to get an element from the DOM."
+  },
+  {
+    "title": "Use the document.createElement() method to create a new element in the DOM."
+  },
+  {
+    "title": "Use the document.createTextNode() method to create a new text node in the DOM."
+  },
+  {
+    "title": "Use the element.appendChild() method to add a child element to another element."
+  },
+  {
+    "title": "Use the element.removeChild() method to remove a child element from another element."
+  },
+  {
+    "title": "Use the element.setAttribute() method to set an attribute on an element."
+  },
+  {
+    "title": "Use the element.getAttribute() method to get the value of an attribute on an element."
+  },
+  {
+    "title": "Create a function that takes an array and returns the largest element."
+  },
+  {
+    "title": "Create a function that takes an array and returns the smallest element."
+  },
+  {
+    "title": "Create a function that takes an array and returns the average value."
+  },
+  {
+    "title": "Create a function that takes an array and returns a new array with only unique elements."
+  },
+  {
+    "title": "Use the map() method to transform the elements of an array."
+  },
+  {
+    "title": "Use the filter() method to filter elements from an array based on a condition."
+  },
+  {
+    "title": "Use the reduce() method to reduce an array to a single value."
+  },
+  {
+    "title": "Use the forEach() method to iterate over an array."
+  },
+  {
+    "title": "Use the some() method to check if at least one element of an array satisfies a condition."
+  },
+  {
+    "title": "Use the every() method to check if all elements of an array satisfy a condition."
+  },
+  {
+    "title": "Use the find() method to find the first element in an array that satisfies a condition."
+  },
+  {
+    "title": "Use the findIndex() method to find the index of the first element in an array that satisfies a condition."
+  },
+  {
+    "title": "Use the slice() method to remove elements from an array without modifying the original array."
+  },
+  {
+    "title": "Use the splice() method to modify an array by adding or removing elements."
+  },
+  {
+    "title": "Use the concat() method to combine two arrays into a new array."
+  },
+  {
+    "title": "Use the Object.keys() method to get an array of an object's keys."
+  },
+  {
+    "title": "Use the Object.values() method to get an array of an object's values."
+  },
+  {
+    "title": "Use the Object.entries() method to get an array of an object's key-value pairs."
+  },
+  {
+    "title": "Use the Object.assign() method to create a new object by merging two or more objects."
+  },
+  {
+    "title": "Use the Object.freeze() method to prevent an object from being modified."
+  },
+  {
+    "title": "Use the Object.seal() method to prevent new properties from being added to an object."
+  },
+  {
+    "title": "Use the instanceof operator to check the type of an object."
+  },
+  {
+    "title": "Use the new keyword to create a new instance of an object."
+  },
+  {
+    "title": "Use the prototype property to add methods to an object's prototype."
+  },
+  {
+    "title": "Use the call() method to invoke a function with a specific context."
+  },
+  {
+    "title": "Use the apply() method to invoke a function with an array of arguments."
+  },
+  {
+    "title": "Use the bind() method to create a new function with a specific context."
+  },
+  {
+    "title": "Use the this keyword to refer to the current object."
+  },
+  {
+    "title": "Use the window object to access global variables and functions."
+  },
+  {
+    "title": "Use the document object to access the DOM."
+  },
+  {
+    "title": "Use the event listener to listen for an event on an element."
+  },
+  {
+    "title": "Use the event.preventDefault() method to prevent the default action of an event."
+  },
+  {
+    "title": "Use the event.stopPropagation() method to stop an event from bubbling up to parent elements."
+  },
+  {
+    "title": "Use the event.target property to get the element that triggered an event."
+  },
+  {
+    "title": "Use the querySelector() method to select an element from the DOM."
+  },
+  {
+    "title": "Use the querySelectorAll() method to select multiple elements from the DOM."
+  },
+  {
+    "title": "Use the innerHTML property to set the content of an element."
+  },
+  {
+    "title": "Use the style property to modify the CSS of an element."
+  },
+  {
+    "title": "Use the getComputedStyle() method to get the computed CSS of an element."
+  },
+  {
+    "title": "Use the offsetTop and offsetLeft properties to get the position of an element relative to its parent."
+  },
+  {
+    "title": "Use the offsetHeight and offsetWidth properties to get the size of an element."
+  },
+  {
+    "title": "Use the scrollHeight and scrollWidth properties to get the size of an element including its overflow."
+  },
+  {
+    "title": "Use the scrollTop and scrollLeft properties to get or set the scroll position of an element."
+  },
+  {
+    "title": "Use the setInterval() method to repeatedly execute code at a set interval."
+  },
+  {
+    "title": "Use the setTimeout() method to delay the execution of code."
+  },
+  {
+    "title": "Use the Promise object to handle asynchronous operations."
+  },
+  {
+    "title": "Use the async/await syntax to write asynchronous code in a synchronous style."
+  },
+  {
+    "title": "Use the fetch() method to make HTTP requests."
+  },
+  {
+    "title": "Use the XMLHttpRequest object to make HTTP requests."
+  },
+  {
+    "title": "Use the FormData object to handle form data in HTTP requests."
+  },
+  {
+    "title": "Use the JSON.parse() method to parse a JSON string into a JavaScript object."
+  },
+  {
+    "title": "Use the JSON.stringify() method to convert a JavaScript object into a JSON string."
+  },
+  {
+    "title": "Use the localStorage object to store data in the browser."
+  },
+  {
+    "title": "Use the sessionStorage object to store data in the browser for a session."
+  },
+  {
+    "title": "Use the location object to get information about the current URL."
+  },
+  {
+    "title": "Use the history object to navigate through the browser's history."
+  },
+  {
+    "title": "Use the navigator object to get information about the user's browser and operating system."
+  },
+  {
+    "title": "Use the setInterval() method to create an animated effect."
+  },
+  {
+    "title": "Use the requestAnimationFrame() method to create a smoother animated effect."
+  },
+  {
+    "title": "Use the canvas element to draw graphics and animations."
+  },
+  {
+    "title": "Use the context object to modify the appearance of the canvas."
+  },
+  {
+    "title": "Use the createLinearGradient() method to create a linear gradient on the canvas."
+  },
+  {
+    "title": "Use the createRadialGradient() method to create a radial gradient on the canvas."
+  },
+  {
+    "title": "Use the drawImage() method to draw an image on the canvas."
+  },
+  {
+    "title": "Use the getImageData() method to get the pixel data of an image on the canvas."
+  },
+  {
+    "title": "Use the putImageData() method to put pixel data onto the canvas."
+  },
+  {
+    "title": "Use the beginPath() method to start drawing a path on the canvas."
+  },
+  {
+    "title": "Use the moveTo() method to move the path to a new location on the canvas."
+  },
+  {
+    "title": "Use the lineTo() method to draw a line on the canvas."
+  },
+  {
+    "title": "Use the arc() method to draw an arc on the canvas."
+  },
+  {
+    "title": "Use the quadraticCurveTo() method to draw a quadratic curve on the canvas."
+  },
+  {
+    "title": "Use the bezierCurveTo() method to draw a cubic bezier curve on the canvas."
+  },
+  {
+    "title": "Use the closePath() method to close a path on the canvas."
+  },
+  {
+    "title": "Use the fill() method to fill a path on the canvas."
+  },
+  {
+    "title": "Use the stroke() method to stroke a path on the canvas."
+  },
+  {
+    "title": "Use the clearRect() method to clear a portion of the canvas."
+  },
+  {
+    "title": "Use the transform() method to transform the canvas."
+  },
+  {
+    "title": "Use the translate() method to move the canvas to a new location."
+  },
+  {
+    "title": "Use the scale() method to scale the canvas."
+  },
+  {
+    "title": "Use the rotate() method to rotate the canvas."
+  },
+  {
+    "title": "Use the save() method to save the current state of the canvas."
+  },
+  {
+    "title": "Use the restore() method to restore the previous state of the canvas."
+  },
+  {
+    "title": "Use the requestFullscreen() method to enter fullscreen mode."
+  },
+  {
+    "title": "Use the exitFullscreen() method to exit fullscreen mode."
+  },
+  {
+    "title": "Use the MediaDevices.getUserMedia() method to access the user's camera and microphone."
+  },
+  {
+    "title": "Use the canvas element and MediaDevices.getUserMedia() to create a video chat application."
+  },
+  {
+    "title": "Use the Web Audio API to create audio effects and synthesizers."
+  },
+  {
+    "title": "Use the AudioContext() method to create a new audio context."
+  },
+  {
+    "title": "Use the createOscillator() method to create an oscillator."
+  },
+  {
+    "title": "Use the createGain() method to create a gain node."
+  },
+  {
+    "title": "Use the createBiquadFilter() method to create a filter node."
+  },
+  {
+    "title": "Use the connect() method to connect audio nodes together."
+  },
+  {
+    "title": "Use the start() method to start an audio node."
+  },
+  {
+    "title": "What is JavaScript?"
+  },
+  {
+    "title": "What is the difference between JavaScript and Java?"
+  },
+  {
+    "title": "What are some common use cases for JavaScript?"
+  },
+  {
+    "title": "What is an event in JavaScript?"
+  },
+  {
+    "title": "What is the DOM?"
+  },
+  {
+    "title": "What is AJAX?"
+  },
+  {
+    "title": "What is a callback function in JavaScript?"
+  },
+  {
+    "title": "What is the difference between let"
+  },
+  {
+    "title": "What is hoisting in JavaScript?"
+  },
+  {
+    "title": "What is the scope chain in JavaScript?"
+  },
+  {
+    "title": "What is closure in JavaScript?"
+  },
+  {
+    "title": "What is a prototype in JavaScript?"
+  },
+  {
+    "title": "What is inheritance in JavaScript?"
+  },
+  {
+    "title": "What is a constructor function in JavaScript?"
+  },
+  {
+    "title": "What is a class in JavaScript?"
+  },
+  {
+    "title": "What is the difference between an object and a function in JavaScript?"
+  },
+  {
+    "title": "What is a pure function in JavaScript?"
+  },
+  {
+    "title": "What is a higher-order function in JavaScript?"
+  },
+  {
+    "title": "What is a generator function in JavaScript?"
+  },
+  {
+    "title": "What is a decorator in JavaScript?"
+  },
+  {
+    "title": "What is the difference between == and === in JavaScript?"
+  },
+  {
+    "title": "What is truthy and falsy in JavaScript?"
+  },
+  {
+    "title": "What is NaN in JavaScript?"
+  },
+  {
+    "title": "What is a closure compiler in JavaScript?"
+  },
+  {
+    "title": "What is the module pattern in JavaScript?"
+  },
+  {
+    "title": "What is a promise in JavaScript?"
+  },
+  {
+    "title": "What is a fetch API in JavaScript?"
+  },
+  {
+    "title": "What is a generator in JavaScript?"
+  },
+  {
+    "title": "What is a decorator in JavaScript?"
+  },
+  {
+    "title": "What is a pipeline operator in JavaScript?"
+  },
+  {
+    "title": "What is a private method or variable in JavaScript?"
+  },
+  {
+    "title": "What is a symbol in JavaScript?"
+  },
+  {
+    "title": "What is a template literal in JavaScript?"
+  },
+  {
+    "title": "What is a rest parameter in JavaScript?"
+  },
+  {
+    "title": "What is a spread operator in JavaScript?"
+  },
+  {
+    "title": "What is a try/catch block in JavaScript?"
+  },
+  {
+    "title": "What is a callback function in JavaScript?"
+  },
+  {
+    "title": "What is a higher-order function in JavaScript?"
+  },
+  {
+    "title": "What is a closure in JavaScript?"
+  },
+  {
+    "title": "What is a generator function in JavaScript?"
+  },
+  {
+    "title": "What is a decorator in JavaScript?"
+  },
+  {
+    "title": "What is a pipeline operator in JavaScript?"
+  },
+  {
+    "title": "What is a private method or variable in JavaScript?"
+  },
+  {
+    "title": "What is a symbol in JavaScript?"
+  },
+  {
+    "title": "What is a template literal in JavaScript?"
+  },
+  {
+    "title": "What is a rest parameter in JavaScript?"
+  },
+  {
+    "title": "What is a spread operator in JavaScript?"
+  },
+  {
+    "title": "What is a try/catch block in JavaScript?"
+  },
+  {
+    "title": "What is a closure compiler in JavaScript?"
+  },
+  {
+    "title": "What is the module pattern in JavaScript?"
+  },
+  {
+    "title": "What is asynchronous programming in JavaScript?"
+  },
+  {
+    "title": "What are promises in JavaScript and how do they work?"
+  },
+  {
+    "title": "What is async/await syntax in JavaScript?"
+  },
+  {
+    "title": "What is a generator function in JavaScript?"
+  },
+  {
+    "title": "What is a coroutine in JavaScript?"
+  },
+  {
+    "title": "What is a worker thread in JavaScript?"
+  },
+  {
+    "title": "What is a shared array buffer in JavaScript?"
+  },
+  {
+    "title": "What is a typed array in JavaScript?"
+  },
+  {
+    "title": "What is a proxy object in JavaScript?"
+  },
+  {
+    "title": "What is a reflection in JavaScript?"
+  },
+  {
+    "title": "What is a decorator in JavaScript?"
+  },
+  {
+    "title": "What is a mixin in JavaScript?"
+  },
+  {
+    "title": "What is the difference between call and apply in JavaScript?"
+  },
+  {
+    "title": "What is the bind method in JavaScript?"
+  },
+  {
+    "title": "What is the call method in JavaScript?"
+  },
+  {
+    "title": "What is the apply method in JavaScript?"
+  },
+  {
+    "title": "What is a closure in JavaScript?"
+  },
+  {
+    "title": "What is the module pattern in JavaScript?"
+  },
+  {
+    "title": "What is a singleton pattern in JavaScript?"
+  },
+  {
+    "title": "What is the observer pattern in JavaScript?"
+  },
+  {
+    "title": "What is the mediator pattern in JavaScript?"
+  },
+  {
+    "title": "What is the facade pattern in JavaScript?"
+  },
+  {
+    "title": "What is the adapter pattern in JavaScript?"
+  },
+  {
+    "title": "What is the composite pattern in JavaScript?"
+  },
+  {
+    "title": "What is the decorator pattern in JavaScript?"
+  },
+  {
+    "title": "What is the flyweight pattern in JavaScript?"
+  },
+  {
+    "title": "What is the proxy pattern in JavaScript?"
+  },
+  {
+    "title": "What is the chain of responsibility pattern in JavaScript?"
+  },
+  {
+    "title": "What is the command pattern in JavaScript?"
+  },
+  {
+    "title": "What is the interpreter pattern in JavaScript?"
+  },
+  {
+    "title": "What is the iterator pattern in JavaScript?"
+  },
+  {
+    "title": "What is the memento pattern in JavaScript?"
+  },
+  {
+    "title": "What is the state pattern in JavaScript?"
+  },
+  {
+    "title": "What is the strategy pattern in JavaScript?"
+  },
+  {
+    "title": "What is the template method pattern in JavaScript?"
+  },
+  {
+    "title": "What is the visitor pattern in JavaScript?"
+  },
+  {
+    "title": "What is the factory method pattern in JavaScript?"
+  },
+  {
+    "title": "What is the abstract factory pattern in JavaScript?"
+  },
+  {
+    "title": "What is the builder pattern in JavaScript?"
+  },
+  {
+    "title": "What is the prototype pattern in JavaScript?"
+  },
+  {
+    "title": "What is the adapter pattern in JavaScript?"
+  },
+  {
+    "title": "What is the facade pattern in JavaScript?"
+  },
+  {
+    "title": "What is the observer pattern in JavaScript?"
+  },
+  {
+    "title": "What is the mediator pattern in JavaScript?"
+  },
+  {
+    "title": "What is the decorator pattern in JavaScript?"
+  },
+  {
+    "title": "What is the flyweight pattern in JavaScript?"
+  },
+  {
+    "title": "What is the proxy pattern in JavaScript?"
+  },
+  {
+    "title": "What is the chain of responsibility pattern in JavaScript?"
+  },
+  {
+    "title": "What is the command pattern in JavaScript?"
+  },
+  {
+    "title": "What is the interpreter pattern in JavaScript?"
+  },
+  {
+    "title": "What is the Event Loop in JavaScript?"
+  },
+  {
+    "title": "What is a microtask in JavaScript?"
+  },
+  {
+    "title": "What is the difference between a synchronous and asynchronous code execution in JavaScript?"
+  },
+  {
+    "title": "What is the difference between a function and a method in JavaScript?"
+  },
+  {
+    "title": "What is a constructor method in JavaScript?"
+  },
+  {
+    "title": "What is a factory function in JavaScript?"
+  },
+  {
+    "title": "What is the Prototype chain in JavaScript?"
+  },
+  {
+    "title": "What is prototypal inheritance in JavaScript?"
+  },
+  {
+    "title": "What is a promise and how to chain promises in JavaScript?"
+  },
+  {
+    "title": "What is the difference between a callback function and a promise in JavaScript?"
+  },
+  {
+    "title": "What is a generator function and how to use it for async programming in JavaScript?"
+  },
+  {
+    "title": "What is a set in JavaScript?"
+  },
+  {
+    "title": "What is a map in JavaScript?"
+  },
+  {
+    "title": "What is a WeakSet and a WeakMap in JavaScript?"
+  },
+  {
+    "title": "What are Symbols in JavaScript and how to use them?"
+  },
+  {
+    "title": "What is a Proxy in JavaScript and how to use it?"
+  },
+  {
+    "title": "What is the Reflect API in JavaScript and how to use it?"
+  },
+  {
+    "title": "What is Object Destructuring in JavaScript?"
+  },
+  {
+    "title": "What is Array Destructuring in JavaScript?"
+  },
+  {
+    "title": "What is Spread syntax in JavaScript?"
+  },
+  {
+    "title": "What is Rest syntax in JavaScript?"
+  },
+  {
+    "title": "What is a Template Literal in JavaScript?"
+  },
+  {
+    "title": "What are Tagged Template Literals in JavaScript and how to use them?"
+  },
+  {
+    "title": "What is Currying in JavaScript?"
+  },
+  {
+    "title": "What is Memoization in JavaScript and how to use it?"
+  },
+  {
+    "title": "What is a Higher-Order Component in JavaScript?"
+  },
+  {
+    "title": "What is a Render Prop in JavaScript?"
+  },
+  {
+    "title": "What is the Context API in React and how to use it?"
+  },
+  {
+    "title": "What is Redux and how to use it in a React application?"
+  },
+  {
+    "title": "What is MobX and how to use it in a React application?"
+  },
+  {
+    "title": "What is React Hooks and how to use them?"
+  },
+  {
+    "title": "What is useMemo Hook in React and how to use it?"
+  },
+  {
+    "title": "What is useCallback Hook in React and how to use it?"
+  },
+  {
+    "title": "What is useContext Hook in React and how to use it?"
+  },
+  {
+    "title": "What is useEffect Hook in React and how to use it?"
+  },
+  {
+    "title": "What is useReducer Hook in React and how to use it?"
+  },
+  {
+    "title": "What is useRef Hook in React and how to use it?"
+  },
+  {
+    "title": "What is Custom Hooks in React and how to use them?"
+  },
+  {
+    "title": "What is Server-Side Rendering (SSR) in React and how to implement it?"
+  },
+  {
+    "title": "What is Next.js and how to use it for SSR in React?"
+  },
+  {
+    "title": "What is GraphQL and how to use it in a React application?"
+  },
+  {
+    "title": "What is a Mutation in GraphQL and how to use it?"
+  },
+  {
+    "title": "What is Apollo Client and how to use it in a React application?"
+  },
+  {
+    "title": "What is a Query in Apollo Client and how to use it?"
+  },
+  {
+    "title": "What is a Subscription in Apollo Client and how to use it?"
+  },
+  {
+    "title": "What is the Observer pattern in JavaScript and how to implement it?"
+  },
+  {
+    "title": "What is the Command pattern in JavaScript and how to implement it?"
+  },
+  {
+    "title": "What is the Strategy pattern in JavaScript and how to implement it?"
+  },
+  {
+    "title": "What is the Factory pattern in JavaScript and how to implement it?"
+  },
+  {
+    "title": "What is the Decorator pattern in JavaScript and how to implement it?"
+  },
+  {
+    "title": "What is the Iterator pattern in JavaScript and how to implement it?"
+  },
+  {
+    "title": "What is the Memento pattern in JavaScript and how to implement it?"
+  },
+  {
+    "title": "What is the Observer pattern in JavaScript and how to implement it?"
+  },
+  {
+    "title": "What is the Mediator pattern in JavaScript and how to implement it?"
+  },
+  {
+    "title": "What is the Facade pattern in JavaScript and how to implement it?"
+  },
+  {
+    "title": "What is the Adapter pattern in JavaScript and how to implement it?"
+  },
+  {
+    "title": "What is the Composite pattern in JavaScript and how to implement it?"
+  },
+  {
+    "title": "What is the Flyweight pattern in JavaScript and how to implement it?"
+  },
+  {
+    "title": "What is the Proxy pattern in JavaScript and how to implement it?"
+  },
+  {
+    "title": "What is the Chain of Responsibility pattern in JavaScript and how to implement it?"
+  },
+  {
+    "title": "What is the Command pattern in JavaScript and how to implement it?"
+  },
+  {
+    "title": "What is the Interpreter pattern in JavaScript and how to implement it?"
+  },
+  {
+    "title": "What is the Template Method pattern in JavaScript and how to implement it?"
+  },
+  {
+    "title": "What is the Visitor pattern in JavaScript and how to implement it?"
+  },
+  {
+    "title": "What is the Factory Method pattern in JavaScript and how to implement it?"
+  },
+  {
+    "title": "What is the Abstract Factory pattern in JavaScript and how to implement it?"
+  },
+  {
+    "title": "What is the Builder pattern in JavaScript and how to implement it?"
+  },
+  {
+    "title": "What is the Prototype pattern in JavaScript and how to implement it?"
+  },
+  {
+    "title": "What is the Singleton pattern in JavaScript and how to implement it?"
+  },
+  {
+    "title": "What is the State pattern in JavaScript and how to implement it?"
+  },
+  {
+    "title": "What is the Strategy pattern in JavaScript and how to implement it?"
+  },
+  {
+    "title": "What is the Data Access Object (DAO) pattern in JavaScript and how to implement it?"
+  },
+  {
+    "title": "What is the Dependency Injection pattern in JavaScript and how to implement it?"
+  },
+  {
+    "title": "What is the Inversion of Control (IoC) pattern in JavaScript and how to implement it?"
+  },
+  {
+    "title": "What is the Aspect-Oriented Programming (AOP) pattern in JavaScript and how to implement it?"
+  },
+  {
+    "title": "What is the Memoization pattern in JavaScript and how to implement it?"
+  },
+  {
+    "title": "What is the Decorator pattern in JavaScript and how to implement it?"
+  },
+  {
+    "title": "What is the Module pattern in JavaScript and how to implement it?"
+  },
+  {
+    "title": "What is the Revealing Module pattern in JavaScript and how to implement it?"
+  },
+  {
+    "title": "What is the Mixin pattern in JavaScript and how to implement it?"
+  },
+  {
+    "title": "What is the Currying pattern in JavaScript and how to implement it?"
+  },
+  {
+    "title": "What is the Memoization pattern in JavaScript and how to implement it?"
+  },
+  {
+    "title": "What is the Composition pattern in JavaScript and how to implement it?"
+  },
+  {
+    "title": "What is the Constructor Injection pattern in JavaScript and how to implement it?"
+  },
+  {
+    "title": "What is the Property Injection pattern in JavaScript and how to implement it?"
+  },
+  {
+    "title": "What is the Method Injection pattern in JavaScript and how to implement it?"
+  },
+  {
+    "title": "What is the Role-based Access Control (RBAC) pattern in JavaScript and how to implement it?"
+  },
+  {
+    "title": "What is the Attribute-based Access Control (ABAC) pattern in JavaScript and how to implement it?"
+  },
+  {
+    "title": "What is the Role-based Authorization Control (RBAC) pattern in JavaScript and how to implement it?"
+  },
+  {
+    "title": "What is the Attribute-based Authorization Control (ABAC) pattern in JavaScript and how to implement it?"
+  },
+  {
+    "title": "What is the Object Pool pattern in JavaScript and how to implement it?"
+  },
+  {
+    "title": "What is the Throttling pattern in JavaScript and how to implement it?"
+  },
+  {
+    "title": "What is the Debouncing pattern in JavaScript and how to implement it?"
+  },
+  {
+    "title": "What is the Binary Search algorithm in JavaScript and how to implement it?"
+  },
+  {
+    "title": "What is the Document Object Model (DOM) and how does it relate to HTML and JavaScript?"
+  },
+  {
+    "title": "What is the Cascading Style Sheets (CSS) and how does it relate to HTML?"
+  },
+  {
+    "title": "What is JavaScript and how does it relate to HTML and CSS?"
+  },
+  {
+    "title": "What is Node.js and how does it relate to JavaScript?"
+  },
+  {
+    "title": "What is the difference between client-side and server-side JavaScript?"
+  },
+  {
+    "title": "What is a package manager and how does it work in Node.js?"
+  },
+  {
+    "title": "What is Express and how does it relate to Node.js?"
+  },
+  {
+    "title": "What is a middleware in Express?"
+  },
+  {
+    "title": "How to use route parameters in Express?"
+  },
+  {
+    "title": "What is query string and how to use it in Express?"
+  },
+  {
+    "title": "What is a template engine and how to use it in Express with Pug?"
+  },
+  {
+    "title": "What is Pug and how does it work with Express?"
+  },
+  {
+    "title": "What is a view in Express and how to create it with Pug?"
+  },
+  {
+    "title": "What is a model in Express and how to create it with MongoDB?"
+  },
+  {
+    "title": "What is MongoDB and how does it relate to Node.js and Express?"
+  },
+  {
+    "title": "What is a document in MongoDB and how to create it with Mongoose?"
+  },
+  {
+    "title": "How to connect to a MongoDB database with Mongoose?"
+  },
+  {
+    "title": "What is a schema in Mongoose?"
+  },
+  {
+    "title": "How to create and update documents in MongoDB with Mongoose?"
+  },
+  {
+    "title": "How to query documents in MongoDB with Mongoose?"
+  },
+  {
+    "title": "How to perform aggregation operations in MongoDB with Mongoose?"
+  },
+  {
+    "title": "How to use indexing in MongoDB with Mongoose?"
+  },
+  {
+    "title": "What is a promise and how to use it with Mongoose?"
+  },
+  {
+    "title": "How to use transactions in MongoDB with Mongoose?"
+  },
+  {
+    "title": "What is a middleware in Mongoose?"
+  },
+  {
+    "title": "What is CSRF protection and how to implement it in Express?"
+  },
+  {
+    "title": "What is session management and how to implement it in Express?"
+  },
+  {
+    "title": "What is authentication and how to implement it in Express?"
+  },
+  {
+    "title": "What is authorization and how to implement it in Express?"
+  },
+  {
+    "title": "What is hashing and how to use it for password security in Express?"
+  },
+  {
+    "title": "What is JSON Web Token (JWT) and how to use it for authentication in Express?"
+  },
+  {
+    "title": "What is OAuth and how to use it for authentication in Express?"
+  },
+  {
+    "title": "What is Passport.js and how to use it for authentication in Express?"
+  },
+  {
+    "title": "How to handle errors in Express with middleware?"
+  },
+  {
+    "title": "How to use logging in Express with middleware?"
+  },
+  {
+    "title": "How to use compression in Express with middleware?"
+  },
+  {
+    "title": "How to use caching in Express with middleware?"
+  },
+  {
+    "title": "What is WebSockets and how to use them in Express with Socket.IO?"
+  },
+  {
+    "title": "How to use HTTP/2 in Express?"
+  },
+  {
+    "title": "What is the difference between HTTP and HTTPS and how to use HTTPS in Express?"
+  },
+  {
+    "title": "How to use SSL/TLS certificates in Express?"
+  },
+  {
+    "title": "What is cross-origin resource sharing (CORS) and how to implement it in Express?"
+  },
+  {
+    "title": "What is load balancing and how to implement it in Express with PM2?"
+  },
+  {
+    "title": "What is containerization and how to use Docker with Express?"
+  },
+  {
+    "title": "What is microservices architecture and how to implement it with Express?"
+  },
+  {
+    "title": "How to deploy an Express application to a server?"
+  },
+  {
+    "title": "How to monitor an Express application with PM2?"
+  },
+  {
+    "title": "How to use a reverse proxy with Express?"
+  },
+  {
+    "title": "How to use NGINX with Express?"
+  },
+  {
+    "title": "How to use Apache with Express?"
+  },
+  {
+    "title": "What is Node.js and why is it used?"
+  },
+  {
+    "title": "How to install Node.js on your computer?"
+  },
+  {
+    "title": "What is the Node.js REPL and how to use it?"
+  },
+  {
+    "title": "How to run a Node.js script from the command line?"
+  },
+  {
+    "title": "What is the Node.js global object and what are its properties?"
+  },
+  {
+    "title": "What is the process object in Node.js and what are its properties?"
+  },
+  {
+    "title": "How to use console.log() in Node.js?"
+  },
+  {
+    "title": "What is the Node.js event loop and how does it work?"
+  },
+  {
+    "title": "What are event emitters and how to use them in Node.js?"
+  },
+  {
+    "title": "How to handle errors in Node.js?"
+  },
+  {
+    "title": "How to read and write files in Node.js?"
+  },
+  {
+    "title": "How to create and delete files in Node.js?"
+  },
+  {
+    "title": "How to create and delete directories in Node.js?"
+  },
+  {
+    "title": "What are streams in Node.js and how to use them?"
+  },
+  {
+    "title": "How to use the fs module in Node.js?"
+  },
+  {
+    "title": "How to use the path module in Node.js?"
+  },
+  {
+    "title": "What is the OS module in Node.js and how to use it?"
+  },
+  {
+    "title": "What is the URL module in Node.js and how to use it?"
+  },
+  {
+    "title": "How to use the querystring module in Node.js?"
+  },
+  {
+    "title": "What is the HTTP module in Node.js and how to use it to create a server?"
+  },
+  {
+    "title": "How to handle HTTP requests and responses in Node.js?"
+  },
+  {
+    "title": "How to use the HTTPS module in Node.js?"
+  },
+  {
+    "title": "How to use the net module in Node.js?"
+  },
+  {
+    "title": "How to use the child_process module in Node.js?"
+  },
+  {
+    "title": "How to use the cluster module in Node.js?"
+  },
+  {
+    "title": "How to use the worker_threads module in Node.js?"
+  },
+  {
+    "title": "How to use the crypto module in Node.js?"
+  },
+  {
+    "title": "How to use the zlib module in Node.js?"
+  },
+  {
+    "title": "How to use the timers module in Node.js?"
+  },
+  {
+    "title": "How to use the util module in Node.js?"
+  },
+  {
+    "title": "What are callbacks in Node.js and how to use them?"
+  },
+  {
+    "title": "What are promises in Node.js and how to use them?"
+  },
+  {
+    "title": "What is async/await in Node.js and how to use it?"
+  },
+  {
+    "title": "What is the event-driven programming model in Node.js?"
+  },
+  {
+    "title": "What is the non-blocking I/O model in Node.js?"
+  },
+  {
+    "title": "What is the difference between synchronous and asynchronous code in Node.js?"
+  },
+  {
+    "title": "What are the advantages of using Node.js over other server-side languages?"
+  },
+  {
+    "title": "How to build a RESTful API in Node.js?"
+  },
+  {
+    "title": "What is JSON in Node.js and how to use it?"
+  },
+  {
+    "title": "How to handle form data in Node.js?"
+  },
+  {
+    "title": "What is authentication and authorization in Node.js?"
+  },
+  {
+    "title": "How to use Passport.js for authentication in Node.js?"
+  },
+  {
+    "title": "How to use sessions and cookies in Node.js?"
+  },
+  {
+    "title": "How to use JWT for authentication in Node.js?"
+  },
+  {
+    "title": "What is database integration in Node.js?"
+  },
+  {
+    "title": "How to use the MongoDB database in Node.js?"
+  },
+  {
+    "title": "How to use the MySQL database in Node.js?"
+  },
+  {
+    "title": "How to use the PostgreSQL database in Node.js?"
+  },
+  {
+    "title": "What is Sequelize and how to use it with Node.js?"
+  },
+  {
+    "title": "What is Mongoose and how to use it with Node.js?"
+  },
+  {
+    "title": "What is Express and why is it used?"
+  },
+  {
+    "title": "How to install and set up Express on your computer?"
+  },
+  {
+    "title": "What is a server in Express and how to create one?"
+  },
+  {
+    "title": "What is middleware in Express and how to use it?"
+  },
+  {
+    "title": "How to use routing in Express?"
+  },
+  {
+    "title": "How to handle HTTP requests and responses in Express?"
+  },
+  {
+    "title": "What are request parameters and how to use them in Express?"
+  },
+  {
+    "title": "What is query string and how to use it in Express?"
+  },
+  {
+    "title": "What is a template engine and how to use it in Express?"
+  },
+  {
+    "title": "How to use Pug as a template engine in Express?"
+  },
+  {
+    "title": "What is a view in Express and how to create one with Pug?"
+  },
+  {
+    "title": "What is a model in Express and how to create one with MongoDB?"
+  },
+  {
+    "title": "How to connect to a MongoDB database with Express?"
+  },
+  {
+    "title": "What is a schema in Mongoose and how to create one?"
+  },
+  {
+    "title": "How to create and update documents in MongoDB with Mongoose and Express?"
+  },
+  {
+    "title": "How to query documents in MongoDB with Mongoose and Express?"
+  },
+  {
+    "title": "How to perform aggregation operations in MongoDB with Mongoose and Express?"
+  },
+  {
+    "title": "What is a promise in Mongoose and how to use it?"
+  },
+  {
+    "title": "How to use transactions in MongoDB with Mongoose and Express?"
+  },
+  {
+    "title": "What is CSRF protection and how to implement it in Express?"
+  },
+  {
+    "title": "What is session management and how to implement it in Express?"
+  },
+  {
+    "title": "What is authentication and how to implement it in Express?"
+  },
+  {
+    "title": "What is authorization and how to implement it in Express?"
+  },
+  {
+    "title": "What is hashing and how to use it for password security in Express?"
+  },
+  {
+    "title": "What is JSON Web Token (JWT) and how to use it for authentication in Express?"
+  },
+  {
+    "title": "What is OAuth and how to use it for authentication in Express?"
+  },
+  {
+    "title": "What is Passport.js and how to use it for authentication in Express?"
+  },
+  {
+    "title": "How to handle errors in Express with middleware?"
+  },
+  {
+    "title": "How to use logging in Express with middleware?"
+  },
+  {
+    "title": "How to use compression in Express with middleware?"
+  },
+  {
+    "title": "What is CORS and how to implement it in Express?"
+  },
+  {
+    "title": "What is load balancing and how to implement it in Express with PM2?"
+  },
+  {
+    "title": "What is containerization and how to use Docker with Express?"
+  },
+  {
+    "title": "What is microservices architecture and how to implement it with Express?"
+  },
+  {
+    "title": "How to deploy an Express application to a server?"
+  },
+  {
+    "title": "How to monitor an Express application with PM2?"
+  },
+  {
+    "title": "How to use a reverse proxy with Express?"
+  },
+  {
+    "title": "How to use NGINX with Express?"
+  },
+  {
+    "title": "How to use Apache with Express?"
+  },
+  {
+    "title": "What is WebSockets and how to use them in Express with Socket.IO?"
+  },
+  {
+    "title": "What is HTTP/2 and how to use it in Express?"
+  },
+  {
+    "title": "What is the difference between HTTP and HTTPS and how to use HTTPS in Express?"
+  },
+  {
+    "title": "How to use SSL/TLS certificates in Express?"
+  },
+  {
+    "title": "What is GraphQL and how to use it in an Express application?"
+  },
+  {
+    "title": "What is a Mutation in GraphQL and how to use it in an Express application?"
+  },
+  {
+    "title": "What is Apollo Server and how to use it in an Express application?"
+  },
+  {
+    "title": "What is a Query in Apollo Server and how to use it in an Express application?"
+  },
+  {
+    "title": "What is a Subscription in Apollo Server and how to use it in an Express application?"
+  },
+  {
+    "title": "How to use Redis with Express?"
+  },
+  {
+    "title": "How to use RabbitMQ with Express?"
+  },
+  {
+    "title": "How to implement pagination in an Express application?"
+  },
+  {
+    "title": "How to implement search functionality in an Express application?"
+  },
+  {
+    "title": "How to use Elasticsearch with Express?"
+  },
+  {
+    "title": "How to use Redis for caching in an Express application?"
+  },
+  {
+    "title": "How to use Redis for session management in an Express application?"
+  },
+  {
+    "title": "How to use Redis for pub/sub messaging in an Express application?"
+  },
+  {
+    "title": "How to use WebSockets with Express and Socket.IO?"
+  },
+  {
+    "title": "How to use GraphQL with Express and Apollo Server?"
+  },
+  {
+    "title": "How to implement real-time updates with GraphQL subscriptions and Apollo Server in an Express application?"
+  },
+  {
+    "title": "How to use Sequelize with Express for database integration?"
+  },
+  {
+    "title": "How to use Sequelize migrations with Express for database schema changes?"
+  },
+  {
+    "title": "How to use Sequelize associations with Express for complex database relationships?"
+  },
+  {
+    "title": "How to use Sequelize hooks with Express for advanced data manipulation?"
+  },
+  {
+    "title": "How to use GraphQL with Sequelize for database integration in an Express application?"
+  },
+  {
+    "title": "How to implement rate limiting in an Express application?"
+  },
+  {
+    "title": "How to use JWT with Redis for blacklisting and revoking tokens in an Express application?"
+  },
+  {
+    "title": "How to implement OAuth with Passport.js in an Express application?"
+  },
+  {
+    "title": "How to implement OAuth2 with Passport.js in an Express application?"
+  },
+  {
+    "title": "How to implement OpenID Connect with Passport.js in an Express application?"
+  },
+  {
+    "title": "How to implement multi-factor authentication in an Express application?"
+  },
+  {
+    "title": "How to implement passwordless authentication in an Express application?"
+  },
+  {
+    "title": "How to use JSON Web Encryption (JWE) with JWT in an Express application?"
+  },
+  {
+    "title": "How to use JSON Web Signature (JWS) with JWT in an Express application?"
+  },
+  {
+    "title": "How to use JSON Web Key (JWK) with JWT in an Express application?"
+  },
+  {
+    "title": "How to use JSON Web Token (JWT) with GraphQL in an Express application?"
+  },
+  {
+    "title": "How to use Redis for distributed locking in an Express application?"
+  },
+  {
+    "title": "How to use Redis for rate limiting in an Express application?"
+  },
+  {
+    "title": "How to use Redis for caching GraphQL responses in an Express application?"
+  },
+  {
+    "title": "How to use Redis for caching Sequelize queries in an Express application?"
+  },
+  {
+    "title": "How to use Elasticsearch for full-text search in an Express application?"
+  },
+  {
+    "title": "How to use Elasticsearch for autocomplete search in an Express application?"
+  },
+  {
+    "title": "How to use Elasticsearch for geographic search in an Express application?"
+  },
+  {
+    "title": "How to use RabbitMQ for message queueing in an Express application?"
+  },
+  {
+    "title": "How to use RabbitMQ for pub/sub messaging in an Express application?"
+  },
+  {
+    "title": "How to use RabbitMQ for task scheduling in an Express application?"
+  },
+  {
+    "title": "How to use RabbitMQ for RPC in an Express application?"
+  },
+  {
+    "title": "How to use RabbitMQ with Redis for caching in an Express application?"
+  },
+  {
+    "title": "How to use RabbitMQ with Elasticsearch for search in an Express application?"
+  },
+  {
+    "title": "How to implement GraphQL federation in an Express application?"
+  },
+  {
+    "title": "How to use Docker Compose for local development in an Express application?"
+  },
+  {
+    "title": "How to use Kubernetes for production deployment of an Express application?"
+  },
+  {
+    "title": "How to implement distributed tracing with Jaeger in an Express application?"
+  },
+  {
+    "title": "How to use Istio for service mesh in an Express application?"
+  },
+  {
+    "title": "How to implement a serverless architecture for an Express application?"
+  },
+  {
+    "title": "How to use AWS Lambda with API Gateway for an Express application?"
+  },
+  {
+    "title": "How to use Google Cloud Functions with Firebase for an Express application?"
+  },
+  {
+    "title": "How to use Azure Functions with Cosmos DB for an Express application?"
+  },
+  {
+    "title": "How to use Knex.js with PostgreSQL for database integration in an Express application?"
+  },
+  {
+    "title": "How to use Objection.js with Knex.js for ORM in an Express application?"
+  },
+  {
+    "title": "How to use Node.js streams for data processing in an Express application?"
+  },
+  {
+    "title": "What is Pug and why is it used?"
+  },
+  {
+    "title": "How to install and set up Pug on your computer?"
+  },
+  {
+    "title": "What is the syntax for Pug and how to use it?"
+  },
+  {
+    "title": "How to use Pug for HTML templating?"
+  },
+  {
+    "title": "What are the benefits of using Pug over HTML?"
+  },
+  {
+    "title": "How to use Pug to generate dynamic content?"
+  },
+  {
+    "title": "How to use Pug mixins for code reusability?"
+  },
+  {
+    "title": "How to use Pug extends for layout templates?"
+  },
+  {
+    "title": "How to use Pug includes for partial templates?"
+  },
+  {
+    "title": "How to use Pug conditionals for conditional rendering?"
+  },
+  {
+    "title": "How to use Pug loops for iteration?"
+  },
+  {
+    "title": "How to use Pug filters for text processing?"
+  },
+  {
+    "title": "How to use Pug variables for data binding?"
+  },
+  {
+    "title": "How to use Pug attributes for HTML attributes?"
+  },
+  {
+    "title": "How to use Pug interpolation for dynamic text?"
+  },
+  {
+    "title": "How to use Pug mixins with parameters for dynamic code?"
+  },
+  {
+    "title": "How to use Pug control flow for conditional and iterative logic?"
+  },
+  {
+    "title": "How to use Pug comments for code documentation?"
+  },
+  {
+    "title": "How to use Pug whitespace control for formatting?"
+  },
+  {
+    "title": "How to use Pug debugging for troubleshooting?"
+  },
+  {
+    "title": "How to use Pug with Express for server-side rendering?"
+  },
+  {
+    "title": "How to use Pug with Node.js for static site generation?"
+  },
+  {
+    "title": "How to use Pug with Gulp for task automation?"
+  },
+  {
+    "title": "How to use Pug with Webpack for module bundling?"
+  },
+  {
+    "title": "How to use Pug with Bootstrap for styling?"
+  },
+  {
+    "title": "How to use Pug with Bulma for styling?"
+  },
+  {
+    "title": "How to use Pug with Materialize for styling?"
+  },
+  {
+    "title": "How to use Pug with Tailwind CSS for styling?"
+  },
+  {
+    "title": "How to use Pug with SCSS for styling?"
+  },
+  {
+    "title": "How to use Pug with PostCSS for styling?"
+  },
+  {
+    "title": "What are Pug mixins and how to use them?"
+  },
+  {
+    "title": "What are Pug includes and how to use them?"
+  },
+  {
+    "title": "What are Pug filters and how to use them?"
+  },
+  {
+    "title": "What are Pug mixins with parameters and how to use them?"
+  },
+  {
+    "title": "What are Pug blocks and how to use them?"
+  },
+  {
+    "title": "What are Pug extends and how to use them?"
+  },
+  {
+    "title": "How to use Pug with BEM methodology for styling?"
+  },
+  {
+    "title": "How to use Pug with SMACSS methodology for styling?"
+  },
+  {
+    "title": "How to use Pug with OOCSS methodology for styling?"
+  },
+  {
+    "title": "How to use Pug with Atomic Design methodology for styling?"
+  },
+  {
+    "title": "What are Pug variables and how to use them?"
+  },
+  {
+    "title": "What are Pug attributes and how to use them?"
+  },
+  {
+    "title": "What are Pug interpolation and how to use them?"
+  },
+  {
+    "title": "What are Pug control flow and how to use them?"
+  },
+  {
+    "title": "What are Pug conditionals and how to use them?"
+  },
+  {
+    "title": "What are Pug loops and how to use them?"
+  },
+  {
+    "title": "How to use Pug with Sass for styling?"
+  },
+  {
+    "title": "How to use Pug with Less for styling?"
+  },
+  {
+    "title": "How to use Pug with Stylus for styling?"
+  },
+  {
+    "title": "How to use Pug with Autoprefixer for vendor prefixing?"
+  },
+  {
+    "title": "What is MongoDB and why is it used?"
+  },
+  {
+    "title": "How to install and set up MongoDB on your computer?"
+  },
+  {
+    "title": "What are collections and documents in MongoDB?"
+  },
+  {
+    "title": "How to create and insert documents in MongoDB?"
+  },
+  {
+    "title": "How to retrieve documents from MongoDB?"
+  },
+  {
+    "title": "How to update documents in MongoDB?"
+  },
+  {
+    "title": "How to delete documents from MongoDB?"
+  },
+  {
+    "title": "What are indexes in MongoDB and how to create them?"
+  },
+  {
+    "title": "How to use aggregation pipelines in MongoDB?"
+  },
+  {
+    "title": "What is sharding in MongoDB and how to implement it?"
+  },
+  {
+    "title": "What is replication in MongoDB and how to implement it?"
+  },
+  {
+    "title": "How to use the MongoDB shell for database interaction?"
+  },
+  {
+    "title": "What is Mongoose and why is it used?"
+  },
+  {
+    "title": "How to install and set up Mongoose on your computer?"
+  },
+  {
+    "title": "What is a schema in Mongoose and how to create one?"
+  },
+  {
+    "title": "What is a model in Mongoose and how to create one?"
+  },
+  {
+    "title": "How to perform CRUD operations with Mongoose?"
+  },
+  {
+    "title": "How to use Mongoose validation for data integrity?"
+  },
+  {
+    "title": "How to use Mongoose middleware for data manipulation?"
+  },
+  {
+    "title": "How to use Mongoose virtuals for computed properties?"
+  },
+  {
+    "title": "How to use Mongoose queries for advanced database interaction?"
+  },
+  {
+    "title": "How to use Mongoose populate for document references?"
+  },
+  {
+    "title": "What are Mongoose subdocuments and how to use them?"
+  },
+  {
+    "title": "What are Mongoose array subdocuments and how to use them?"
+  },
+  {
+    "title": "How to use Mongoose aggregation for advanced data analysis?"
+  },
+  {
+    "title": "How to use Mongoose plugins for advanced functionality?"
+  },
+  {
+    "title": "How to use Mongoose transactions for data consistency?"
+  },
+  {
+    "title": "What is Mongoose lean and how to use it for performance optimization?"
+  },
+  {
+    "title": "How to use Mongoose indexing for query performance?"
+  },
+  {
+    "title": "How to use Mongoose schema options for data control?"
+  },
+  {
+    "title": "What is Mongoose discriminators and how to use them for polymorphic data?"
+  },
+  {
+    "title": "How to use Mongoose virtual population for denormalization?"
+  },
+  {
+    "title": "How to use Mongoose geo-spatial queries for location-based data?"
+  },
+  {
+    "title": "How to use Mongoose change streams for real-time data synchronization?"
+  },
+  {
+    "title": "What is Mongoose middleware and how to use it for data manipulation?"
+  },
+  {
+    "title": "What is Mongoose schema types and how to use them for data validation?"
+  },
+  {
+    "title": "What is Mongoose statics and how to use them for model-level methods?"
+  },
+  {
+    "title": "What is Mongoose methods and how to use them for instance-level methods?"
+  },
+  {
+    "title": "What is Mongoose hooks and how to use them for pre and post save logic?"
+  },
+  {
+    "title": "What is Mongoose indexes and how to use them for query optimization?"
+  },
+  {
+    "title": "How to use Mongoose with Express for server-side development?"
+  },
+  {
+    "title": "How to use Mongoose with Node.js for standalone applications?"
+  },
+  {
+    "title": "How to use Mongoose with GraphQL for API development?"
+  },
+  {
+    "title": "How to use Mongoose with Passport.js for authentication?"
+  },
+  {
+    "title": "How to use Mongoose with Socket.IO for real-time data synchronization?"
+  },
+  {
+    "title": "How to use Mongoose with Elasticsearch for full-text search?"
+  },
+  {
+    "title": "How to use Mongoose with RabbitMQ for message queueing?"
+  },
+  {
+    "title": "How to use Mongoose with Redis for caching?"
+  },
+  {
+    "title": "How to use Mongoose with AWS Lambda for serverless architecture?"
+  },
+  {
+    "title": "How to use Mongoose with Docker for containerization?"
+  },
+  {
+    "title": "How to use transactions with Mongoose and MongoDB?"
+  },
+  {
+    "title": "How to use Mongoose with Elasticsearch for full-text search?"
+  },
+  {
+    "title": "How to use Mongoose with GraphQL for API development?"
+  },
+  {
+    "title": "How to use Mongoose with RabbitMQ for message queueing?"
+  },
+  {
+    "title": "How to use Mongoose with Redis for caching?"
+  },
+  {
+    "title": "How to use Mongoose with AWS Lambda for serverless architecture?"
+  },
+  {
+    "title": "How to use Mongoose with Docker for containerization?"
+  },
+  {
+    "title": "How to use Mongoose virtuals with aggregate pipelines?"
+  },
+  {
+    "title": "How to use Mongoose aggregate pipelines for data aggregation?"
+  },
+  {
+    "title": "How to use Mongoose subdocuments for nested data structures?"
+  },
+  {
+    "title": "How to use Mongoose array subdocuments for arrays of nested data?"
+  },
+  {
+    "title": "How to use Mongoose virtual population for denormalization?"
+  },
+  {
+    "title": "How to use Mongoose discriminators for polymorphic data?"
+  },
+  {
+    "title": "How to use Mongoose indexes for query performance?"
+  },
+  {
+    "title": "How to use Mongoose middleware for advanced data manipulation?"
+  },
+  {
+    "title": "How to use Mongoose transactions for data consistency?"
+  },
+  {
+    "title": "How to use Mongoose hooks for pre and post save logic?"
+  },
+  {
+    "title": "How to use Mongoose schema options for data control?"
+  },
+  {
+    "title": "How to use Mongoose setters and getters for data manipulation?"
+  },
+  {
+    "title": "How to use Mongoose plugins for advanced functionality?"
+  },
+  {
+    "title": "How to use Mongoose schema validation for data integrity?"
+  },
+  {
+    "title": "How to use Mongoose schema default values for data consistency?"
+  },
+  {
+    "title": "How to use Mongoose schema methods for instance-level methods?"
+  },
+  {
+    "title": "How to use Mongoose schema statics for model-level methods?"
+  },
+  {
+    "title": "How to use Mongoose queries for advanced database interaction?"
+  },
+  {
+    "title": "How to use Mongoose queries with promises for asynchronous code?"
+  },
+  {
+    "title": "How to use Mongoose population for document references?"
+  },
+  {
+    "title": "How to use Mongoose deep population for nested references?"
+  },
+  {
+    "title": "How to use Mongoose validation with Promises and async/await?"
+  },
+  {
+    "title": "How to use Mongoose indexes with compound keys?"
+  },
+  {
+    "title": "How to use Mongoose validation with custom validators?"
+  },
+  {
+    "title": "How to use Mongoose update validators for update operations?"
+  },
+  {
+    "title": "How to use Mongoose update validators with custom validators?"
+  },
+  {
+    "title": "How to use Mongoose global middleware for database-wide hooks?"
+  },
+  {
+    "title": "How to use Mongoose instance middleware for document-specific hooks?"
+  },
+  {
+    "title": "How to use Mongoose query middleware for query-specific hooks?"
+  },
+  {
+    "title": "How to use Mongoose middleware to automatically update timestamps?"
+  },
+  {
+    "title": "How to use Mongoose virtuals with setters and getters for computed properties?"
+  },
+  {
+    "title": "How to use Mongoose transform middleware for data formatting?"
+  },
+  {
+    "title": "How to use Mongoose lean with promises for faster query performance?"
+  },
+  {
+    "title": "How to use Mongoose lean with streaming for large datasets?"
+  },
+  {
+    "title": "How to use Mongoose select for specifying which fields to return?"
+  },
+  {
+    "title": "How to use Mongoose projections for specifying which fields to include/exclude?"
+  },
+  {
+    "title": "How to use Mongoose pagination for handling large datasets?"
+  },
+  {
+    "title": "How to use Mongoose fuzzy search with regex for partial matches?"
+  },
+  {
+    "title": "How to use Mongoose case-insensitive search for case-insensitive matching?"
+  },
+  {
+    "title": "How to use Mongoose search with diacritic-insensitive matching?"
+  },
+  {
+    "title": "How to use Mongoose search with stemming for word variations?"
+  },
+  {
+    "title": "How to use Mongoose search with text indexes for full-text search?"
+  },
+  {
+    "title": "How to use Mongoose search with Elasticsearch for advanced search capabilities?"
+  },
+  {
+    "title": "What are the benefits of using HTML"
+  },
+  {
+    "title": "How to create responsive web design with HTML and CSS?"
+  },
+  {
+    "title": "How to use CSS Grid and Flexbox for layout?"
+  },
+  {
+    "title": "What is the Document Object Model (DOM) and how to use it with JavaScript?"
+  },
+  {
+    "title": "What are JavaScript events and how to use them for interactivity?"
+  },
+  {
+    "title": "What is Ajax and how to use it for asynchronous requests?"
+  },
+  {
+    "title": "What is the difference between server-side and client-side scripting?"
+  },
+  {
+    "title": "What is Node.js and how to use it for server-side development?"
+  },
+  {
+    "title": "What are the benefits of using Node.js for server-side development?"
+  },
+  {
+    "title": "How to create a basic Node.js server and handle requests?"
+  },
+  {
+    "title": "How to use modules and packages with Node.js?"
+  },
+  {
+    "title": "How to use npm to manage dependencies?"
+  },
+  {
+    "title": "How to use Express for server-side routing?"
+  },
+  {
+    "title": "How to use middleware with Express for advanced functionality?"
+  },
+  {
+    "title": "How to use template engines like Pug with Express for server-side rendering?"
+  },
+  {
+    "title": "What is MongoDB and how to use it for data storage?"
+  },
+  {
+    "title": "What are the benefits of using MongoDB for data storage?"
+  },
+  {
+    "title": "How to create a basic MongoDB database and insert data?"
+  },
+  {
+    "title": "How to retrieve and update data from MongoDB using Node.js and Express?"
+  },
+  {
+    "title": "How to use Mongoose to interact with MongoDB in Node.js?"
+  },
+  {
+    "title": "How to use Mongoose schema validation and middleware for data integrity?"
+  },
+  {
+    "title": "How to use Mongoose virtuals"
+  },
+  {
+    "title": "How to use Mongoose aggregation pipelines for data analysis?"
+  },
+  {
+    "title": "How to use Pug for HTML templating with Express and Node.js?"
+  },
+  {
+    "title": "What are the benefits of using Pug for HTML templating?"
+  },
+  {
+    "title": "How to use Pug mixins for code reusability?"
+  },
+  {
+    "title": "How to use Pug includes for partial templates?"
+  },
+  {
+    "title": "How to use Pug conditionals for conditional rendering?"
+  },
+  {
+    "title": "How to use Pug loops for iteration?"
+  },
+  {
+    "title": "How to use Pug filters for text processing?"
+  },
+  {
+    "title": "What are RESTful APIs and how to use them with Node.js and Express?"
+  },
+  {
+    "title": "How to create a basic API with Node.js and Express?"
+  },
+  {
+    "title": "How to handle GET"
+  },
+  {
+    "title": "How to use query parameters and route parameters with Node.js and Express?"
+  },
+  {
+    "title": "How to use request and response objects with Node.js and Express?"
+  },
+  {
+    "title": "How to use Express middleware for API authentication and authorization?"
+  },
+  {
+    "title": "What is JSON Web Tokens (JWT) and how to use them for API authentication?"
+  },
+  {
+    "title": "How to use Passport.js with Node.js and Express for authentication?"
+  },
+  {
+    "title": "How to handle file uploads with Node.js and Express?"
+  },
+  {
+    "title": "How to use socket.io for real-time data synchronization with Node.js and Express?"
+  },
+  {
+    "title": "What are WebSockets and how to use them with Node.js and Express?"
+  },
+  {
+    "title": "How to use Redis for caching with Node.js and Express?"
+  },
+  {
+    "title": "How to use Elasticsearch for full-text search with Node.js and Express?"
+  },
+  {
+    "title": "How to use RabbitMQ for message queueing with Node.js and Express?"
+  },
+  {
+    "title": "How to use Docker for containerization with Node.js and Express?"
+  },
+  {
+    "title": "How to use AWS Lambda for serverless architecture with Node.js and Express?"
+  },
+  {
+    "title": "What is serverless architecture and how to use it with Node.js and Express?"
+  },
+  {
+    "title": "What are microservices and how to use them with Node.js and Express?"
+  },
+  {
+    "title": "What are design patterns and how to use them with Node.js and Express?"
+  },
+  {
+    "title": "What are the best practices for testing Node.js and Express applications?"
+  },
+  {
+    "title": "How to use Jest for unit testing with Node.js and Express?"
+  },
+  {
+    "title": "How to use Supertest for integration testing with Node.js and Express?"
+  },
+  {
+    "title": "How to use Docker for testing with Node.js and Express?"
+  },
+  {
+    "title": "How to use Continuous Integration (CI) with Node.js and Express?"
+  },
+  {
+    "title": "What are the security considerations for Node.js and Express applications?"
+  },
+  {
+    "title": "How to use Helmet for security headers with Node.js and Express?"
+  },
+  {
+    "title": "How to use CORS for cross-origin resource sharing with Node.js and Express?"
+  },
+  {
+    "title": "How to use rate limiting for API throttling with Node.js and Express?"
+  },
+  {
+    "title": "How to use JWT for API authentication and authorization with Node.js and Express?"
+  },
+  {
+    "title": "How to use bcrypt for password hashing with Node.js and Express?"
+  },
+  {
+    "title": "How to use SSL/TLS for secure communication with Node.js and Express?"
+  },
+  {
+    "title": "How to use CSRF protection for preventing cross-site request forgery with Node.js and Express?"
+  },
+  {
+    "title": "What are the performance considerations for Node.js and Express applications?"
+  },
+  {
+    "title": "How to use caching for performance optimization with Node.js and Express?"
+  },
+  {
+    "title": "How to use compression for reducing response size with Node.js and Express?"
+  },
+  {
+    "title": "How to use clustering for multi-process scaling with Node.js and Express?"
+  },
+  {
+    "title": "How to use load balancing for distributing traffic with Node.js and Express?"
+  },
+  {
+    "title": "How to use profiling for identifying performance bottlenecks with Node.js and Express?"
+  },
+  {
+    "title": "What are the scalability considerations for Node.js and Express applications?"
+  },
+  {
+    "title": "How to use microservices for modular architecture with Node.js and Express?"
+  },
+  {
+    "title": "How to use message queueing for asynchronous communication with Node.js and Express?"
+  },
+  {
+    "title": "How to use sharding for horizontal scaling with MongoDB?"
+  },
+  {
+    "title": "How to use replication for high availability with MongoDB?"
+  },
+  {
+    "title": "How to use indexes for query optimization with MongoDB?"
+  },
+  {
+    "title": "How to use aggregation pipelines for advanced data analysis with MongoDB?"
+  },
+  {
+    "title": "How to use transactions for data consistency with MongoDB?"
+  },
+  {
+    "title": "What are the best practices for database backup and recovery with MongoDB?"
+  },
+  {
+    "title": "What are the best practices for disaster recovery with Node.js and Express?"
+  },
+  {
+    "title": "How to use logging for monitoring and debugging with Node.js and Express?"
+  },
+  {
+    "title": "How to use monitoring tools like New Relic for performance analysis with Node.js and Express?"
+  },
+  {
+    "title": "What are the considerations for deploying Node.js and Express applications in the cloud?"
+  },
+  {
+    "title": "How to use AWS for cloud deployment with Node.js and Express?"
+  },
+  {
+    "title": "How to use Heroku for cloud deployment with Node.js and Express?"
+  },
+  {
+    "title": "How to use Google Cloud for cloud deployment with Node.js and Express?"
+  },
+  {
+    "title": "How to use Microsoft Azure for cloud deployment with Node.js and Express?"
+  },
+  {
+    "title": "How to use DigitalOcean for cloud deployment with Node.js and Express?"
+  },
+  {
+    "title": "How to use Docker for containerization and deployment with Node.js and Express?"
+  },
+  {
+    "title": "How to use Kubernetes for container orchestration with Node.js and Express?"
+  },
+  {
+    "title": "How to use Terraform for infrastructure as code with Node.js and Express?"
+  },
+  {
+    "title": "What are the considerations for API documentation with Node.js and Express?"
+  },
+  {
+    "title": "How to use Swagger for API documentation with Node.js and Express?"
+  },
+  {
+    "title": "How to use JSDoc for code documentation with Node.js and Express?"
+  },
+  {
+    "title": "How to use Postman for API testing and documentation with Node.js and Express?"
+  },
+  {
+    "title": "What are the considerations for versioning APIs with Node.js and Express?"
+  },
+  {
+    "title": "How to use SemVer for versioning APIs with Node.js and Express?"
+  }
+]

@@ -1,0 +1,51 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title GPTDao | #{title}
+    style
+      include ./css/style.css
+      include ./css/footer.css
+      include ./css/login.css
+    link(rel='stylesheet' href='/css/footer.css')
+    link(rel='stylesheet' href='/css/style.css')
+    link(rel='stylesheet' href='/css/login.css')
+    link(rel='shortcut icon' type='image/png' href='img/favicon.png')
+    link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:300,300i,700')
+    script(src='/../../script.js')
+    script(src='/../../login.js')
+
+  body(data-alert=`${alert ? alert : ''}`)
+
+    include _header
+
+    block content
+      .login-container
+        .overlay(onclick="window.location.href='/'")
+        .modal
+          .modal-grid
+            .modal-left
+              img(class="login-img", src='images/18.png' alt='Your Image')
+            .modal-right
+              h1.login-text Login to your account
+              form.login-credentials(method='POST' action='/api/auth/login')
+                label.login-label(for='email') Email
+                input#login-email(type='email' name='login-email')
+                label.login-label(for='password') Password
+                input#login-password(type='password' name='password')
+                .incorrect-details
+                  p Email or password incorrect
+                .login-button-container
+                  button.login-button(type='submit') Login
+                .forgot-password
+                  a(href='#') Forgot your password?
+              .new-here.login-label
+                p
+                  a(href='/register') New here? 
+                  a(href='/register') Create an account today!
+
+    include _footer
+
+    script(crossorigin="anonymous" src='https://js.stripe.com/v3/')
+    script(src='/js/bundle.js')

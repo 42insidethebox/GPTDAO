@@ -1,0 +1,40 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    style
+      include ./css/footer.css
+    link(rel='stylesheet' href='/css/footer.css')
+    link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css")
+    link(rel="stylesheet", href="/styles/styles.css")
+    script(src='/../../script.js')
+    title Course Platform
+  body
+    .container
+      .d-flex.flex-column.justify-content-center
+      .sequence-container.d-inline-flex.flex-row
+        .sequence.w-100
+          nav#courseware-sequenceNavigation.sequence-navigation.mb-4
+            button.previous-btn.btn.btn-link(type='button')
+              span.pgn__icon.btn-icon-before
+                svg(width='24' height='24' viewbox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg' role='img' focusable='false' aria-hidden='true')
+                  path(d='M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12l4.58-4.59z' fill='currentColor')
+              | Previous
+            div(style='flex-basis: 100%; min-width: 100px;')
+              .sequence-navigation-tabs-container
+                .sequence-navigation-tabs.d-flex.flex-grow-1(style='')
+                  button.complete.btn.btn-link(title='GPT-DAO Introduction' type='button')
+                    // Add SVG icons and other content here
+                  button.active.btn.btn-link(title='Tokenomics and Governance' type='button')
+                    // Add SVG icons and other content here
+                  button.btn.btn-link(title='Community and Collaboration' type='button')
+                    // Add SVG icons and other content here
+                  button.btn.btn-link(title='Use Cases and Applications' type='button')
+                    // Add SVG icons and other content here
+                  button.btn.btn-link(title='Future Development' type='button')
+                    // Add SVG icons and other content here
+                  button.btn.btn-link(title='Frequently Asked Questions' type='button')
+                    // Add SVG icons and other content here
+

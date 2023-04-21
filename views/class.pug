@@ -1,0 +1,129 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title GPTDao | #{title}
+    style
+        include ./css/class.css
+        include ./css/footer.css
+        include ./css/style.css
+    link(rel='stylesheet' href='/css/footer.css')
+    link(rel='stylesheet' href='/css/style.css')
+    script(src="script.js")
+    script(src='/../../script.js') 
+    link(rel='shortcut icon' type='image/png' href='img/favicon.png')
+    link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:300,300i,700')
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css")
+
+  body(data-alert=`${alert ? alert : ''}`)
+
+    include _header
+
+    // CONTENT
+    block content
+      main
+        .container
+          .search-bar-container
+            input.search-bar(type='text' placeholder='Search for courses or topics...')
+          h1.course-title Course Title
+          
+
+          .content-row
+            .content-column
+              
+              
+              // Slides Container
+              .slides-container
+                // Slide Example
+                .slide
+                  .slide-content(style='overflow-y: auto;')
+                    p.slide-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras venenatis egestas sollicitudin. Proin id ligula euismod, semper est quis, dapibus erat. Duis tempor, metus ac pulvinar consectetur, erat tellus convallis nibh, in ullamcorper ligula metus a ipsum.
+
+                // Slide Navigation
+                .slide-nav
+                  button.slide-nav-button(type='button') Previous Slide
+                  button.slide-nav-button(type='button') Next Slide
+
+                  // Slide Title
+              h3.slide-title.mb-0 Slide Title
+
+              // Author Information
+              .author-info
+                img.author-avatar(src='img/avatar.jpg', alt='Author Avatar', width='50', height='50')
+                h4.author-name Author Name
+                p.author-description Description about the course...
+
+                
+
+              // Social Buttons and Voting
+              .social-buttons
+                button.social-button(type='button') Share
+                .vote-buttons
+                  button.upvote-button(type='button') Upvote
+                  button.downvote-button(type='button') Downvote
+
+              // Comment Input
+              .comment-input-container
+                input.comment-input(type='text' placeholder='Add a comment...')
+                button.comment-button(type='button') Send
+
+            .sidebar-column
+              // Sidebar Playlist
+              h2.upcoming-lessons-title Upcoming Lessons
+              .lesson-list
+                a.lesson-item(href='#')
+                  img.lesson-thumbnail(src='img/lesson-thumbnail.jpg', alt='Lesson Thumbnail', width='50')
+                  .lesson-info
+                    .lesson-name Lesson 1
+                    .lesson-rating ★ 4.5
+
+          // Comments
+          .comments
+            h2.comments-title Comments
+            // Comment Example
+            .comment
+              img.comment-avatar(src='img/avatar.jpg', alt='User Avatar', width='50', height='50')
+              .comment-content
+                .comment-header
+                  h4.comment-name Commenter Name
+                  span.comment-date Posted on 25 Mar 2023
+                p.comment-text Comment text here
+                 .comment-interactions
+                  span.like
+                    i.fas.fa-thumbs-up.ml-3
+                    span 10
+                  span.dislike
+                    i.fas.fa-thumbs-down
+                    span 1
+                  span.reply
+                    i.fas.fa-reply
+                    span Reply
+                .replies
+                  .reply
+                    img.reply-avatar(src='img/avatar.jpg', alt='User Avatar', width='40', height='40')
+                    .reply-content
+                      .reply-header
+                        h4.reply-name Reply Author
+                        span.reply-date Posted on 25 Mar 2023
+                      p.reply-text Reply text here.
+                      .reply-interactions
+                        span.like
+                          i.fas.fa-thumbs-up.ml-3
+                          span 5
+                        span.dislike
+                          i.fas.fa-thumbs-down
+                          span 0
+                        span.reply
+                          i.fas.fa-reply
+                          span Reply
+
+            // Load More Comments Button
+            button.load-more-comments(type='button') Load More Comments
+            // Back to Top Button
+            .back-to-top
+            a(href='#') Back to Top
+
+    include _footer
+
+    script(src='/js/bundle.js')

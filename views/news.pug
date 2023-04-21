@@ -1,0 +1,225 @@
+doctype html
+html 
+  head
+    block head 
+      meta(charset='UTF-8')
+      meta(name='viewport' content='width=device-width, initial-scale=1.0')
+      title GPTDao | #{title}
+      style
+        include ./css/style.css
+        include ./css/news.css
+        include ./css/footer.css
+      link(rel='stylesheet' href='/css/footer.css')
+      link(rel='stylesheet' href='/css/style.css')
+      link(rel='stylesheet' href='/css/news.css')
+
+      link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css')
+      link(rel='shortcut icon' type='image/png' href='img/favicon.png')
+      link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:300,300i,700')
+      script(src='/../../script.js')
+        
+  body(data-alert=`${alert ? alert : ''}`)
+
+    include _header
+
+      //CONTENT
+    block content
+      h1 This is a placeholder heading
+      
+      #news-page
+        .container
+          .row
+            .col-lg-9
+              // Main content (3fr)
+              #main-content
+                #featured-news
+                  h2 Featured News Articles
+                  a(href="#") View All Featured
+                  ul
+                    li
+                      .featured-news-item
+                        img(class="featured-img", src="/images/03.png", alt="News Image")
+                        h3
+                          a(href="#") Sample Featured News Article 1
+                        .metadata
+                          span.date Date: 01-01-2023
+                          span.category Category: AI
+                          span.author Author: John Doe
+                        p Sample summary of the featured news article 1.
+                        .box-shadow
+                    li
+                      .featured-news-item
+                        img(class="featured-img", src="/images/03.png", alt="News Image")
+                        h3
+                          a(href="#") Sample Featured News Article 1
+                        .metadata
+                          span.date Date: 01-01-2023
+                          span.category Category: AI
+                          span.author Author: John Doe
+                        p Sample summary of the featured news article 1.
+                        .box-shadow
+                    li
+                      .featured-news-item
+                        img(class="featured-img", src="/images/03.png", alt="News Image")
+                        h3
+                          a(href="#") Sample Featured News Article 1
+                        .metadata
+                          span.date Date: 01-01-2023
+                          span.category Category: AI
+                          span.author Author: John Doe
+                        p Sample summary of the featured news article 1.
+                        .box-shadow
+                    li
+                      .featured-news-item
+                        img(class="featured-img", src="/images/03.png", alt="News Image")
+                        h3
+                          a(href="#") Sample Featured News Article 1
+                        .metadata
+                          span.date Date: 01-01-2023
+                          span.category Category: AI
+                          span.author Author: John Doe
+                        p Sample summary of the featured news article 1.
+                        .box-shadow
+                    // Add more .featured-news-item elements as needed
+
+                #latest-news
+                  h2 Latest News
+                  a(href="#") View All Latest
+                  ul
+                    li
+                      .latest-news-item
+                        img(class="featured-image", src="/images/16.png", alt="News Image")
+                        h3
+                          a(href="#") Sample Latest News Article 1
+                        .metadata
+                          span.date Date: 01-01-2023
+                          span.category Category: AI
+                          span.author Author: John Doe
+                        p Sample summary of the latest news article 1.
+                        .box-shadow
+                  // Add more .latest-news-item elements as needed
+
+                #trending-news
+                  h2 Trending News
+                  a(href="#") View All Trending
+                  ul
+                    li
+                      .trending-news-item
+                        img(class="featured-image",src="/images/34.png", alt="News Image")
+                        h3
+                          a(href="#") Sample Trending News Article 1
+                        .metadata
+                          span.date Date: 01-01-2023
+                          span.category Category: AI
+                          span.author Author: John Doe
+                        p Sample summary of the trending news article 1.
+                        .box-shadow
+                  // Add more .trending-news-item elements as needed
+            .col-lg-3
+              // Sidebar content (1fr)
+              #sidebar
+                #submit-news
+                  h2 Submit News
+                  form(action="/submit-news", method="POST")
+                    label(for="news-title") Title
+                    input#news-title(type="text", name="title", required)
+                    label(for="news-url") URL
+                    input#news-url(type="url", name="url", required)
+                    label(for="news-category") Category
+                    select#news-category(name="category", required)
+                      option(value="AI") AI
+                      option(value="Blockchain") Blockchain  
+                      option(value="Education") Education
+                    button(type="submit") Submit News
+
+                #newsletter-subscription
+                  h2 Subscribe
+                  form(action="/subscribe", method="POST")
+                    label(for="subscriber-email") Email
+                    input#subscriber-email(type="email", name="email", required)
+                    button(type="submit") Subscribe
+
+                #social-sharing
+                  h2 Share
+                  ul
+                    li
+                      a(href="https://www.facebook.com/sharer.php?u=newsUrl", target="_blank") Share on Facebook
+                    li
+                      a(href="https://twitter.com/intent/tweet?url=newsUrl&text=newsTitle", target="_blank") Share on Twitter
+                    li
+                      a(href="https://www.linkedin.com/shareArticle?url=newsUrl&title=newsTitle", target="_blank") Share on LinkedIn
+
+                #related-news
+                  h2 Related News
+                  ul
+                    li
+                      a(href="#") Sample Related News Article 1
+                    li
+                      a(href="#") Sample Related News Article 2
+
+                #news-archives
+                  h2 News Archives
+                  ul
+                    li
+                      a(href="#") January 2023
+                    li
+                      a(href="#") February 2023
+
+                #save-news
+                  button Save for Later
+
+                #personalized-news
+                  h2 Personalized News Feed
+                  ul
+                    li
+                      a(href="#") Sample Personalized News Article 1
+                    li
+                      a(href="#") Sample Personalized News Article 2
+
+                #news-by-industry
+                  h2 News by Industry
+                  ul
+                    li
+                      a(href="#") AI
+                    li
+                      a(href="#") Blockchain
+                    li
+                      a(href="#") Education
+
+                #topic-email-alerts
+                  h2 Topic-specific Email Alerts
+                  form(action="/subscribe-topic-alerts", method="POST")
+                    label(for="alert-email") Email
+                    input#alert-email(type="email", name="email", required)
+                    label(for="topic-selection") Topic
+                    select#topic-selection(name="topic", required)
+                      option(value="AI") AI
+                      option(value="Blockchain") Blockchain
+                      option(value="Education") Education
+                    button(type="submit") Subscribe
+
+                #news-games
+                  h2 News-based Games and Challenges
+                  ul
+                    li
+                      a(href="#") Sample News Game 1
+                    li
+                      a(href="#") Sample News Game 2
+
+                #news-ethics
+                  h2 News Ethics and Guidelines
+                  ul
+                    li
+                      a(href="#") Sample Ethics Guideline 1
+                    li
+                      a(href="#") Sample Ethics Guideline 2
+
+      //FOOTER
+
+    include _footer
+    //- script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js')
+    //- script(src='/js/mapbox.js')
+    //- script(src='/js/login.js')
+    script(crossorigin="anonymous" src='https://js.stripe.com/v3/')
+    script(src='/js/bundle.js')
+

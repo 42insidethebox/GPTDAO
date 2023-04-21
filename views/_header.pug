@@ -1,0 +1,41 @@
+header
+  .container
+    .container-dropdown
+      .container-dropdown-title
+        h1(id='nav-icon') GPTDao
+        img.burger(id='burger' src='http://localhost:3000/images/menu-rounded.png' alt='an image' width='24px' height='24px')
+      nav(id='nav')
+        .nav-wrapper
+            ul
+              li.nav-link
+                a(href='about') About
+              li.nav-link
+                a(href='team') Team
+              li.nav-link
+                a(href='join-us') Join
+              li.nav-link
+                a(href='news') News
+              li.nav-link
+                a(href='whitepaper') Whitepaper
+              li.nav-link
+                a(href='blog') Blog
+              li.nav-link
+                a(href='courses') University
+              li.nav-link
+                button.btn.btn-buy-now Buy now
+              if loggedIn
+                li.nav-link
+                  a(href='/profile')
+                    i.fa.fa-user
+                li.nav-link
+                   a(class="btn-logout", href='#') Logout
+              else
+                li.nav-link
+                  button.btn.btn-login(type='button' onclick="window.location.href='/login'") Login
+                li.nav-link
+                  button.btn.btn-register(type='button' onclick="window.location.href='/register'") Register
+              li.language-selector
+                select
+                  option(value='en') English
+                  option(value='es') Espa&ntilde;ol
+                  option(value='fr') Fran&ccedil;ais

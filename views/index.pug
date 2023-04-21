@@ -1,0 +1,145 @@
+doctype html
+html
+  head
+    block head
+      meta(charset='UTF-8')
+      meta(name='viewport' content='width=device-width, initial-scale=1.0')
+      title GPTDao 
+      style
+        include ./css/style.css
+        include ./css/footer.css
+        include ./css/slides.css
+      link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css')  
+      link(rel='stylesheet' href='/css/footer.css')
+      link(rel='stylesheet' href='/css/style.css')
+      link(rel='stylesheet' href='/css/slides.css')
+
+      script(src='/../../script.js')
+      link(rel='shortcut icon' type='image/png' href='img/favicon.png')
+      link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:300,300i,700')
+        
+  body(data-alert=`${alert ? alert : ''}`)
+
+    include _header
+
+      //CONTENT
+    block content
+      main
+  section#hero
+    background-img(src='/images/033.png', alt='My Image') 
+    .container 
+    .container-head
+      h2 Leading the way in AI innovation
+      p.p-hero
+        | GPTDao is an AI-driven parent company that incubates and invests in
+        | a diverse portfolio of companies that are using AI to drive progress
+        | and generate returns. Learn more about our mission and how you can
+        | get involved by exploring our website.
+      p
+        a( class="go-to-whitepaper" href="/whitepaper") Learn more
+    .container
+    .container-about
+      h2 About GPTDao
+      p.p-about
+        | GPTDao is a parent company that specializes in the development and
+        | implementation of cutting-edge AI technology across a diverse range
+        | of industries. We invest in and incubate a portfolio of innovative
+        | companies that are using AI to solve real-world problems and drive
+        | progress.
+      p 
+        a(class="go-to-about", href="/about") Read more
+  section#portfolio
+    .container
+      h2.portfolio Portfolio
+      .container-cards
+        .card
+          img(src='/images/03.png' alt='Image 1')
+          .card-content
+            h1 Card 1 Heading
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel elit id elit sagittis laoreet vitae at mi.
+            a.enroll-button(href='#') Enroll
+        .card
+          img(src='/images/01.png' alt='Image 1')
+          .card-content
+            h1 Card 1 Heading
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel elit id elit sagittis laoreet vitae at mi.
+            a.enroll-button(href='#') Enroll
+        .card
+          img(src='/images/05.png' alt='Image 1')
+          .card-content
+            h1 Card 1 Heading
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel elit id elit sagittis laoreet vitae at mi.
+            a.enroll-button(href='#') Enroll
+  section#call-to-action
+    .container
+      h2 Discover the Future with GPTDAO
+      p Join us in building a decentralized incubator powered by AI, where your votes shape the projects of tomorrow.
+
+      .cta-content
+        .cta-text
+          h3 Fully Autonomous AI
+          p Harness the power of cutting-edge AI technology to create innovative solutions, products, and services in various domains, improving efficiency and decision-making processes.
+
+        .cta-text
+          h3 Engaged Community
+          p Be part of a passionate community that fosters collaboration and growth, working together to create a brighter future for all, driven by shared goals and a commitment to progress.
+
+        .cta-text
+          h3 Investment in Tomorrow
+          p Contribute to the development of advanced software and hardware that will power the world of tomorrow, creating opportunities for everyone to benefit from technological advancements.
+
+  
+
+  .cta-gallery
+    .cta-actions
+      button.btn.btn-register.btn-register-cta(data-slide="register-slide", style="transform: translateY(-20%); background-color:#0b69c6 ") Register
+      button.btn.btn-buy-tokens.btn-buy-tokens-cta(data-slide="buy-tokens-slide") Buy Tokens
+      button.btn.btn-buy-nfts.btn-buy-nfts-cta(data-slide="buy-nfts-slide") Buy NFTs
+      button.btn.btn-vote.btn-vote-cta(data-slide="voting-slide") Vote on Projects
+  .cta-modal
+    #register-slide.slide.active
+      h3 Register
+      p Register for a GPTDao account and become a part of our growing community.
+      .cta-form-container
+        form(class="cta-form", action='/register', method='post')
+          label(for='username') Username
+          input(type='text', name='username', id='username', required)
+          
+          label(for='email') Email
+          input(type='email', name='email-register', id='email', required)
+          
+          label(for='password') Password
+          input(type='password', name='password', id='password', required)
+          
+          button(class="btn btn-signup", type='submit') Sign Up
+
+    #buy-tokens-slide.slide
+      h3 Buy Tokens
+      p Purchase GPTDao tokens through PancakeSwap and invest in our projects.
+      iframe(src='https://pancakeswap.finance/swap?outputCurrency=0x8076c74c5e3f5852037f31ff0093eeb8c8add8d3', width='100%', height='500px', frameborder='0', allowfullscreen)
+
+
+    #buy-nfts-slide.slide
+      h3 Buy NFTs
+      p Explore and buy unique NFTs from our OpenSea collection, created by talented artists.
+      iframe(src='https://opensea.io/nftinitcom_DM-OTC', width='100%', height='500px', frameborder='0', allowfullscreen)
+
+    #voting-slide.slide
+      h3 Vote on Projects
+      p Your votes shape the future of GPTDao. Participate in voting and decide which projects we should invest in.
+      a(href='/projects-voting') Go to Voting Page
+
+  
+  include _footer
+    //- script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js')
+    //- script(src='/js/mapbox.js')
+    //- script(src='/js/login.js')
+    //- script(src='/js/bundle.js')
+
+
+
+
+

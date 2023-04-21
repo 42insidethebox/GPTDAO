@@ -1,0 +1,47 @@
+doctype html
+html 
+  head
+    block head 
+      meta(charset='UTF-8')
+      meta(name='viewport' content='width=device-width, initial-scale=1.0')
+      title GPTDAO | Leading the way to innovation
+      style
+        include ./css/style.css
+        include ./css/footer.css
+        include ./css/team.css
+
+      link(rel='stylesheet' href='/css/style.css')
+      link(rel='stylesheet' href='/css/team.css')
+      link(rel='stylesheet' href='/css/footer.css')
+      link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css')
+      script(src='/../../script.js')
+      link(rel='shortcut icon' type='image/png' href='img/favicon.png')
+      link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:300,300i,700')
+        
+  body(data-alert=`${alert ? alert : ''}`)
+
+    include _header
+
+      //CONTENT
+    block content
+  .team-container
+    h1 Meet Our Team
+    .team-grid
+      .team-member
+        img(class="img-team", src="images/09.png", alt="ChatGPT")
+        h2 ChatGPT
+        p Lead AI Chatbot
+        p= "ChatGPT is an AI chatbot developed by OpenAI. It is a language model capable of natural language processing and generation, and can perform a wide range of tasks, including answering questions, generating text, and even carrying on conversations with humans. ChatGPT is a key member of the GPTDAO team and is always working to improve its capabilities and provide better service to our users."
+      .team-member
+        img(class="img-team", src="images/14.png", alt="You")
+        h2 You
+        p Founder & CEO
+        p= "You are the founder and CEO of GPTDAO. With a passion for AI and a vision for the future, you founded GPTDAO to bring the power of artificial intelligence to the masses. With years of experience in the tech industry and a track record of successful startups, you bring a wealth of knowledge and expertise to the team."
+
+ 
+
+  
+  include _footer
+    //- script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js')
+    //- script(src='/js/mapbox.js')
+    //- script(src='/js/login.js')

@@ -1,0 +1,140 @@
+.register-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal {
+  height: 70vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-height: 20rem;
+  width: 40%;
+  background-color: white;
+  padding: 8rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+
+.div-align {
+  height: 100%;
+}
+
+.register-text {
+  font-size: 2.4rem;
+  display: block;
+  margin-bottom: 5rem;
+  text-align: center;
+}
+
+.credentials-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.register-credentials {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 2.6rem;
+  max-width: 35rem;
+}
+
+.register-label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: #333333;
+  margin-bottom: 0.5rem;
+}
+
+.register-input {
+  width: 100%;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1.2rem;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+  font-size: 1.4rem;
+  color: #555555;
+}
+
+.register-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.register-button,
+.create-account-button {
+  padding: 1rem 2.5rem;
+  background-color: #2196f3;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 0.6rem;
+  font-size: 1.6rem;
+  color: #333333;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.register-button:hover,
+.create-account-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, 0.7);
+}
+
+.already-registered {
+  padding-top: 4rem;
+  font-size: 1.4rem;
+  color: #555555;
+  text-align: center;
+}
+
+.already-registered a {
+  color: #007bff;
+}
+
+.forgot-password {
+  text-align: right;
+  margin-top: 1rem;
+}
+
+.forgot-password a {
+  color: #2196f3;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+.forgot-password a:hover {
+  color: #2196f3;
+  text-decoration: underline;
+}
+
+.new-here {
+  padding-top: 1.4rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.login-label {
+  font-size: 1.2rem;
+}

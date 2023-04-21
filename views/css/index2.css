@@ -1,0 +1,77 @@
+/* Add this to your existing styles.css */
+
+/* Section Headings */
+section h2 {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+/* Project suggestion cards */
+.suggestion-card,
+.featured-card,
+.favorite-card,
+.update-card {
+  display: inline-block;
+  margin: 1em;
+  padding: 1em;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  width: calc(33.33% - 2em);
+  box-sizing: border-box;
+}
+
+.suggestion-card img,
+.featured-card img,
+.favorite-card img,
+.update-card img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 1em;
+}
+
+.suggestion-card h4,
+.featured-card h4,
+.favorite-card h4,
+.update-card h4 {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.suggestion-card p,
+.featured-card p,
+.favorite-card p,
+.update-card p {
+  font-size: 1em;
+  margin-bottom: 1em;
+}
+
+.suggestion-card a,
+.featured-card a,
+.favorite-card a,
+.update-card a {
+  text-decoration: none;
+  color: #2196f3;
+  font-weight: bold;
+}
+
+/* Responsive styles */
+@media (max-width: 991px) {
+  .suggestion-card,
+  .featured-card,
+  .favorite-card,
+  .update-card {
+    width: calc(50% - 2em);
+  }
+}
+
+@media (max-width: 767px) {
+  .suggestion-card,
+  .featured-card,
+  .favorite-card,
+  .update-card {
+    width: 100%;
+  }
+}

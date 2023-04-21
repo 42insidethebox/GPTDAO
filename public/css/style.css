@@ -1,0 +1,659 @@
+/* Global Styles */
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5;
+  color: #333;
+  background-color: #ffffff;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+p {
+  font-size: 22px;
+  letter-spacing: 0.05rem;
+}
+
+.p-hero,
+.p-about {
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+}
+
+/* Header Styles */
+header {
+  background-color: #fff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+header h1 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0;
+  padding: 1em 2em;
+  text-align: left;
+}
+
+header nav {
+  padding: 1em 2em;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li {
+  display: inline-block;
+  margin-left: 1em;
+}
+
+header nav ul li a {
+  color: #333;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+header nav ul li a:hover {
+  color: #2196f3;
+}
+
+/* Main Content Styles */
+main {
+  padding: 4em 2em;
+}
+
+main h2 {
+  font-size: 2em;
+  font-weight: bold;
+  margin-top: 2em;
+  text-align: center;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+}
+/* Hero Section Styles */
+#hero {
+  background-image: url("http://localhost:3000/images/033.png");
+  background-size: cover;
+  background-position: 50% 40%;
+  color: #fff;
+  padding: 6em 0;
+  backdrop-filter: blur(10px);
+  z-index: 2;
+}
+
+#hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+#hero h2 {
+  font-size: 3em;
+  padding-left: 2rem;
+}
+
+#hero p {
+  margin-top: 1em;
+  padding: 2rem;
+}
+
+/* Portfolio Section Styles */
+#portfolio {
+  background-color: #fff;
+  padding: 6em 0;
+  text-align: center;
+}
+
+#portfolio h2 {
+  margin-top: 0;
+}
+
+/* Invest Section Styles */
+#invest {
+  background-color: #f5f5f5;
+  padding: 6em 0;
+  text-align: center;
+}
+
+#invest h2 {
+  margin-top: 0;
+}
+/* Team Section Styles */
+#team {
+  background-color: #fff;
+  padding: 6em 0;
+  text-align: center;
+}
+
+#team h2 {
+  margin-top: 0;
+}
+
+/* Careers Section Styles */
+#careers {
+  background-color: #f5f5f5;
+  padding: 6em 0;
+  text-align: center;
+}
+
+#careers h2 {
+  margin-top: 0;
+}
+
+/* News Section Styles */
+#news {
+  background-color: #fff;
+  padding: 6em 0;
+  text-align: center;
+}
+
+#news h2 {
+  margin-top: 0;
+}
+
+/* Whitepaper Section Styles */
+#whitepaper {
+  background-color: #f5f5f5;
+  padding: 6em 0;
+  text-align: center;
+}
+
+#whitepaper h2 {
+  margin-top: 0;
+}
+
+/* Blog Section Styles */
+#blog {
+  background-color: #fff;
+  padding: 6em 0;
+  text-align: center;
+}
+
+#blog h2 {
+  margin-top: 0;
+}
+
+/* Contact Section Styles */
+#contact {
+  color: #fff;
+  padding: 6em 0;
+  text-align: center;
+}
+
+#contact h2 {
+  margin-top: 0;
+}
+
+#about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 2rem 4rem;
+  margin: 0rem 0rem 2rem 0rem;
+}
+
+#portfolio {
+  color: #333;
+}
+
+.portfolio {
+  color: #333;
+}
+
+.p-portfolio {
+  font-weight: bold;
+  font-size: 32px;
+}
+
+a.btn-register {
+  border: 2px solid #333;
+}
+
+.btn {
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.4rem;
+  border: none;
+  font-weight: bold;
+}
+
+.btn,
+.btn-login,
+.btn-buy-now,
+.btn-register,
+li.language-selector select,
+.btn-register-cta,
+.btn-buy-tokens-cta,
+.btn-buy-nfts-cta,
+.btn-vote-cta,
+.enroll-button {
+  background-color: #338feb;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+.btn-login:hover,
+.btn-buy-now:hover,
+.btn-register:hover,
+li.language-selector select:hover {
+  background-color: #0b69c6;
+  color: #fff;
+}
+
+li.language-selector select {
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+
+  padding: 8px 20px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.container {
+  width: 100%;
+}
+
+.container-head,
+.container-about {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.hidden {
+  display: none;
+}
+.hi {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 2rem;
+  padding-bottom: 1rem;
+}
+
+.burger {
+  padding: 2em 1em;
+}
+
+.nav-justify {
+  width: 100%;
+}
+
+.container-dropdown-title {
+  width: 100%;
+}
+
+.container-dropdown {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container-dropdown-title {
+  display: flex;
+  align-items: center;
+}
+
+.burger {
+  margin-left: auto;
+  padding-left: 1em;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 1130px) {
+  container-dropdown {
+    position: absolute;
+  }
+  header h1 {
+    font-size: 1.25em;
+    padding: 1em;
+  }
+
+  header nav {
+    padding: 1em;
+  }
+
+  header nav ul li {
+    display: block;
+    margin: 0.5em 0;
+  }
+}
+
+@media screen and (min-width: 1130px) {
+  .burger {
+    display: inline-block;
+  }
+}
+
+.container-cards {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 20px;
+}
+
+.card {
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  width: calc(33.33% - 20px);
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+.card:hover {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+  transform: translateY(-5px);
+  transition: all 0.3s ease-in-out;
+}
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  vertical-align: middle;
+}
+.card-content {
+  padding: 20px;
+}
+.card h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.card p {
+  font-size: 16px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+.enroll-button {
+  display: block;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+.enroll-button:hover {
+  background-color: #eee;
+  color: #333;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+}
+
+@media screen and (max-width: 1130px) {
+  .container-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+  }
+}
+
+ul a {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+button {
+  cursor: pointer;
+}
+
+.card-body.custom-width {
+  width: 90%;
+  margin: 0 auto;
+  border: 2px solid red;
+}
+
+.nav-menu {
+  display: none;
+}
+
+.nav-active {
+  display: block;
+}
+
+h1 {
+  padding-bottom: 0;
+}
+
+.container-dropdown {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Add new class .nav-wrapper */
+.nav-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+/* Remove text-align property from header nav */
+header nav {
+  padding: 1em 2em;
+}
+
+ul {
+  display: flex;
+  gap: 1rem;
+}
+
+nav {
+  display: flex;
+  width: 95%;
+  justify-content: flex-end;
+}
+
+.show {
+  display: block !important;
+}
+
+.nav-animate-out {
+  animation: slideUp 0.5s forwards;
+}
+
+.nav-animate-in {
+  animation: slideDown 0.3s forwards;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(0);
+    visibility: visible;
+  }
+  100% {
+    transform: translateY(-100%);
+    visibility: hidden;
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+    visibility: hidden;
+  }
+  100% {
+    transform: translateY(0);
+    visibility: visible;
+  }
+}
+
+.container-dropdown-animate-out {
+  animation: resizeOut 0.3s forwards;
+  padding-bottom: 1rem;
+}
+
+.container-dropdown-animate-in {
+  animation: resizeIn 0.3s forwards;
+}
+
+@keyframes resizeOut {
+  0% {
+    height: auto;
+  }
+  100% {
+    height: 60px;
+  }
+}
+
+@keyframes resizeIn {
+  0% {
+    height: 60px;
+  }
+  100% {
+    height: auto;
+  }
+}
+
+.nav-animate-out li {
+  animation: fadeOut 0.5s forwards;
+}
+
+.nav-animate-in li {
+  animation: fadeIn 0.2s forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.nav-active {
+  display: flex !important;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 1130px) {
+  header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  header nav ul li {
+    display: inline-block;
+    margin: 0.5em 1em;
+  }
+
+  li button,
+  li select {
+    display: block;
+    margin: 0.5em auto;
+  }
+}
+
+@media only screen and (max-width: 1130px) {
+  header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  header nav ul li {
+    display: inline-block;
+    margin: 0.5em 1em;
+  }
+
+  /* Add the following styles to center the buttons and select element */
+  li button,
+  li select {
+    display: block;
+    margin: 0.5em auto;
+  }
+}
+
+#nav-icon {
+  cursor: pointer;
+}
+
+.btn-register-cta,
+.btn-buy-tokens-cta,
+.btn-buy-nfts-cta,
+.btn-vote-cta {
+  transform: translateY(50%);
+}
+
+.cta-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+}
+
+.go-to-about,
+.go-to-whitepaper {
+  background-color: #338feb;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  border-radius: 10px;
+}
+
+.go-to-about:hover,
+.go-to-whitepaper:hover {
+  background-color: #eee;
+  padding: 0.5rem 1rem;
+}
+
+#register-slide,
+#buy-tokens-slide,
+#buy-nfts-slide,
+#voting-slide {
+  box-shadow: 0px 0px 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+li a:link,
+li a:visited {
+  color: #222;
+}

@@ -1,0 +1,88 @@
+doctype html
+html
+  head
+    block head
+      meta(charset='UTF-8')
+      meta(name='viewport' content='width=device-width, initial-scale=1.0')
+      title GPTDao | #{title}
+      style
+        include ./css/style.css
+        include ./css/footer.css
+        include ./css/university.css
+        
+      link(rel='stylesheet' href='/css/style.css')
+      link(rel='stylesheet' href='/css/footer.css')
+      link(rel='stylesheet' href='/css/university.css')
+      link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css')
+      link(rel='shortcut icon' type='image/png' href='img/favicon.png')
+      link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:300,300i,700')
+      script(src='/../../script.js')        
+       
+  body(data-alert=`${alert ? alert : ''}`)
+
+    include _header
+
+      //CONTENT
+    block content
+      // CONTENT
+main 
+   .content-container
+    h1.text-center Courses
+    .row
+      .sidebar
+        .filters-container
+          h3 Filter by Topic
+          .form-group
+            select#topic.form-control
+              option Select a Topic
+              option Computer Science
+              option Languages
+          h3 Filter by Subtopic
+          .form-group
+            select#subtopic.form-control
+              option Select a Subtopic
+              option Computer Science
+              option Languages
+              option Data Science
+              option Robotics
+              option Natural Language Processing
+    .main-content
+      .form-group.search-container
+        input#search-input.form-control(type='text' placeholder='Search for a course')
+      .card-grid
+        .card-course
+          img.card-img-top(src='/images/39.png' alt='...')
+          .card-body
+            h5.card-title Introduction to Artificial Intelligence
+            p.card-text
+              | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer euismod, dui ac malesuada pharetra, ipsum neque bibendum ante.
+            a.btn.btn-primary(href='#') Learn more
+        .card-course
+          img.card-img-top(src='https://picsum.photos/200/300' alt='...')
+          .card-body
+            h5.card-title Machine Learning for Beginners
+            p.card-text
+              | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer euismod, dui ac malesuada pharetra, ipsum neque bibendum ante.
+            a.btn.btn-primary(href='#') Learn more
+        .card-course
+          img.card-img-top(src='https://picsum.photos/200/300' alt='...')
+          .card-body
+            h5.card-title Data Science Fundamentals
+            p.card-text
+              | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer euismod, dui ac malesuada pharetra, ipsum neque bibendum ante.
+            a.btn.btn-primary(href='#') Learn more
+
+  
+      //FOOTER
+
+include _footer
+    //- script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js')
+    //- script(src='/js/mapbox.js')
+    //- script(src='/js/login.js')
+    script(crossorigin="anonymous" src='https://js.stripe.com/v3/')
+    script(src='/js/bundle.js')
+
+
+
+
+

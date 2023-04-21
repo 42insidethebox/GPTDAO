@@ -1,0 +1,13 @@
+# .gitignore
+
+# Ignore node_modules
+node_modules/
+
+# Ignore environment variables
+config.env
+
+# Ignore logs
+*.log
+
+# Ignore build artifacts
+dist/

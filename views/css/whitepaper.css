@@ -1,0 +1,61 @@
+/* whitepaper.css */
+
+.whitepaper-container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 2rem 0;
+  font-family: "Lato", sans-serif;
+  line-height: 1.6;
+}
+
+.whitepaper-container h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  padding-top: 2.6rem;
+}
+
+.whitepaper-container h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.whitepaper-container p {
+  text-align: justify;
+}
+
+.whitepaper-container ol {
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.whitepaper-container ol li {
+  margin-bottom: 0.5rem;
+}
+
+.whitepaper-container ul {
+  list-style-type: disc;
+  padding-left: 2rem;
+  margin-bottom: 1rem;
+}
+
+.whitepaper-container ul li {
+  margin-bottom: 0.25rem;
+}
+
+.whitepaper-container section {
+  margin-bottom: 2rem;
+}
+
+.whitepaper-head {
+  margin-top: 5rem;
+}
+
+.center-img {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}

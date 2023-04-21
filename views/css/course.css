@@ -1,0 +1,54 @@
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+
+.container {
+  min-width: 1500px;
+}
+
+.checkmark {
+  color: green;
+  font-weight: bold;
+}
+
+/* Course image */
+.course-img-top {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s;
+}
+
+.course-img-top:hover {
+  transform: translateY(-5px);
+}
+
+/* Course content */
+.course-content {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+/* Course info */
+.course-info {
+  background-color: #ffffff;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+/* Related courses */
+.related-courses ul {
+  margin-bottom: 20px;
+}

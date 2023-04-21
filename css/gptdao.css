@@ -1,0 +1,236 @@
+/* Global Styles */
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5;
+  color: #333;
+  background-color: #fafafa;
+}
+
+p {
+  font-size: 22px;
+  letter-spacing: 0.05rem;
+}
+
+.p-hero {
+  font-size: 22px;
+}
+
+.p-about {
+  font-size: 18px;
+}
+
+/* Header Styles */
+header {
+  background-color: #fff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+header h1 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0;
+  padding: 1em 2em;
+  text-align: left;
+}
+
+header nav {
+  text-align: right;
+  padding: 1em 2em;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li {
+  display: inline-block;
+  margin-left: 1em;
+}
+
+header nav ul li a {
+  color: #333;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+header nav ul li a:hover {
+  color: #2196f3;
+}
+
+/* Main Content Styles */
+main {
+  padding: 4em 2em;
+}
+
+main h2 {
+  font-size: 2em;
+  font-weight: bold;
+  margin-top: 2em;
+  text-align: center;
+}
+
+/* Hero Section Styles */
+#hero {
+  background-image: url("./images/aboutgpt.png");
+  color: #fff;
+  padding: 6em 0;
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+#hero h2 {
+  font-size: 3em;
+}
+
+#hero p {
+  margin-top: 1em;
+  padding: 2rem;
+}
+
+/* Portfolio Section Styles */
+#portfolio {
+  background-color: #fff;
+  padding: 6em 0;
+  text-align: center;
+}
+
+#portfolio h2 {
+  margin-top: 0;
+}
+
+/* Invest Section Styles */
+#invest {
+  background-color: #f5f5f5;
+  padding: 6em 0;
+  text-align: center;
+}
+
+#invest h2 {
+  margin-top: 0;
+}
+/* Team Section Styles */
+#team {
+  background-color: #fff;
+  padding: 6em 0;
+  text-align: center;
+}
+
+#team h2 {
+  margin-top: 0;
+}
+
+/* Careers Section Styles */
+#careers {
+  background-color: #f5f5f5;
+  padding: 6em 0;
+  text-align: center;
+}
+
+#careers h2 {
+  margin-top: 0;
+}
+
+/* News Section Styles */
+#news {
+  background-color: #fff;
+  padding: 6em 0;
+  text-align: center;
+}
+
+#news h2 {
+  margin-top: 0;
+}
+
+/* Whitepaper Section Styles */
+#whitepaper {
+  background-color: #f5f5f5;
+  padding: 6em 0;
+  text-align: center;
+}
+
+#whitepaper h2 {
+  margin-top: 0;
+}
+
+/* Blog Section Styles */
+#blog {
+  background-color: #fff;
+  padding: 6em 0;
+  text-align: center;
+}
+
+#blog h2 {
+  margin-top: 0;
+}
+
+/* Contact Section Styles */
+#contact {
+  background-color: #2196f3;
+  color: #fff;
+  padding: 6em 0;
+  text-align: center;
+}
+
+#contact h2 {
+  margin-top: 0;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1em 0;
+}
+
+footer p {
+  margin: 0;
+}
+
+#about {
+  background-color: #2196f3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 2rem 4rem;
+  margin: 0rem 0rem 2rem 0rem;
+  box-shadow: 0.1rem 0.2rem 0.1rem 0.1rem rgba(0, 0, 0, 0.2);
+}
+
+#portfolio {
+  background-image: url("./images/portfolio copy.png");
+  color: #2196f3;
+  box-shadow: 0.1rem 0.2rem 0.1rem 0.1rem rgba(0, 0, 0, 0.2);
+}
+
+.portfolio {
+  color: #333;
+}
+
+.p-portfolio {
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.btn {
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.4rem;
+  border: none;
+  font-weight: bold;
+}
+
+.btn-login {
+  background-color: #2196f3;
+  color: #eee;
+}
+
+.btn-register {
+  background-color: #eee;
+  color: #1b71b8;
+}

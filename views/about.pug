@@ -1,0 +1,167 @@
+doctype html
+html 
+  head
+    block head 
+      meta(charset='UTF-8')
+      meta(name='viewport' content='width=device-width, initial-scale=1.0')
+      title GPTDAO | #{title}
+      style
+        include ./css/style.css
+        include ./css/about.css
+        include ./css/team.css
+
+        include ./css/footer.css
+      link(rel='stylesheet' href='/css/footer.css')
+      link(rel='stylesheet' href='/css/style.css')
+      link(rel='stylesheet' href='/css/team.css')
+      link(rel='stylesheet' href='/css/about.css')
+      link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css')  
+      script(src='/../../script.js')
+      link(rel='shortcut icon' type='image/png' href='img/favicon.png')
+      link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:300,300i,700')
+        
+  body(data-alert=`${alert ? alert : ''}`)
+
+    include _header
+
+      //CONTENT
+    block content
+      section#about.about
+      .container
+        .about__content
+          h2.about__title Revolutionizing Decentralized Startup Incubation
+          p.about__description
+            | GPT DAO is a decentralized startup incubator that provides support, resources, and funding for innovative projects in the blockchain space. Our mission is to empower entrepreneurs and revolutionize the startup landscape through community-driven decision-making and transparent governance.
+          a.about__button(href='#') Learn More
+        .about__image
+    section#values.values
+      .container
+        h2.values__title Our Core Values
+        .values__list
+          .value
+            img.value__icon(src='path/to/transparency-icon.svg' alt='Transparency icon')
+            h3.value__title Transparency
+            p.value__description We believe in openness and honesty in all of our actions and decisions.
+          .value
+            img.value__icon(src='path/to/community-icon.svg' alt='Community icon')
+            h3.value__title Community
+            p.value__description
+              | We are committed to fostering a strong and inclusive community that supports innovation and growth.
+          .value
+            img.value__icon(src='path/to/innovation-icon.svg' alt='Innovation icon')
+            h3.value__title Innovation
+            p.value__description We embrace creativity and encourage new ideas and approaches to problem-solving.
+    
+    section.vision#vision
+      div.z-pattern-container
+        div.z-pattern-text
+          div.z-pattern-text-content
+            h2 Introduction
+            p The GPTDAO project aims to harness the power of AI and blockchain technology to create a decentralized, autonomous organization that empowers a global community to build the future of AI software and hardware.
+            p  This organization will be guided by the collaboration and engagement of its members, who will be able to participate in decision-making processes, access exclusive resources, and benefit from the growth of the GPTDAO ecosystem.
+        div.z-pattern-image
+          img(src="images/18.png", alt="Vision Image")
+        div.z-pattern-image
+          img(src="images/15.png", alt="Vision Image")
+        div.z-pattern-text
+          div.z-pattern-text-content
+            h2 The AI Revolution
+            p Recent advances in AI research and development have sparked a revolution in various industries, with AI systems like GPT-3 proving to be exceptionally adept at understanding and generating human-like text.
+            p This technology has the potential to revolutionize sectors such as education, healthcare, finance, and entertainment, among others.
+            p  The GPTDAO project aims to capitalize on these advances and create a vibrant ecosystem where AI-powered tools and services can flourish.
+        div.z-pattern-text
+          div.z-pattern-text-content
+            h2 Harnessing the Power of AI
+            p The GPTDAO platform will feature a suite of AI-powered tools and applications designed to address various use cases and solve real-world problems. These tools may include, but are not limited to:
+            ul.gptdao-features
+              li Autonomous decision-making tools for businesses
+              li Personalized learning and tutoring
+              li Development of companies in several different sectors
+        div.z-pattern-image
+          img(src="images/19.png", alt="Vision Image")
+        div.z-pattern-image
+          img(src="images/25.png", alt="Vision Image")
+        div.z-pattern-text
+          div.z-pattern-text-content
+            h2 The GPTDAO Community
+            p The core of the GPTDAO ecosystem will be its community of engaged members, who will play an active role in shaping the organization's direction and participating in various initiatives. Some of the key aspects of the community will include:
+            ul.gptdao-features 
+              li Collaborative decision-making through governance proposals and voting
+              li Opportunities for networking and collaboration with other members
+              li Social sharing of AI-generated content and creations
+              li Earning rewards and incentives for contributing to the platform's growth
+        div.z-pattern-text
+          div.z-pattern-text-content
+            h2 The GPTDAO Token and NFTs
+            p To facilitate the GPTDAO ecosystem, a native utility token will be introduced, which can be used to access platform services, participate in governance, and unlock additional benefits.
+            p In addition, GPTDAO will also leverage the growing popularity of non-fungible tokens (NFTs) to create unique, AI-generated digital art and collectibles that can be bought, sold, and traded within the community.
+        div.z-pattern-image
+          img(src="images/22.png", alt="Vision Image")
+        div.z-pattern-image
+          img(src="images/24.png", alt="Vision Image")
+        div.z-pattern-text
+          div.z-pattern-text-content
+            h2 Investing in the Future of AI:
+            p The GPTDAO project recognizes the importance of continued investment in AI research and development, as well as the infrastructure needed to support its growth. As such, a portion of the organization's resources will be dedicated to funding initiatives focused on:
+            ul
+              li Developing new AI algorithms and models
+              li Promoting responsible AI ethics and standards
+              li Supporting educational programs and research in all fields of human endeavour
+
+
+    section#team.team
+      .container
+        h2.team__title Meet Our Team
+        .team-grid
+          .team-member
+            img(class="img-team", src="images/09.png", alt="ChatGPT")
+            h2 ChatGPT
+            p Lead AI Chatbot
+            p= "ChatGPT is an AI chatbot developed by OpenAI. It is a language model capable of natural language processing and generation, and can perform a wide range of tasks, including answering questions, generating text, and even carrying on conversations with humans. ChatGPT is a key member of the GPTDAO team and is always working to improve its capabilities and provide better service to our users."
+          .team-member
+            img(class="img-team", src="images/14.png", alt="You")
+            h2 You
+            p Founder & CEO
+            p= "You are the founder and CEO of GPTDAO. With a passion for AI and a vision for the future, you founded GPTDAO to bring the power of artificial intelligence to the masses. With years of experience in the tech industry and a track record of successful startups, you bring a wealth of knowledge and expertise to the team."
+
+    section#timeline.timeline
+      .container
+        h2.timeline__title Our Timeline
+        ul.timeline__list
+          li.timeline__item
+            .timeline__content
+              h3.timeline__date 2018
+              p.timeline__description
+                | GPT DAO is founded by a group of blockchain enthusiasts with a vision to empower entrepreneurs through decentralized startup incubation.
+          li.timeline__item
+            .timeline__content
+              h3.timeline__date 2019
+              p.timeline__description
+                | GPT DAO launches its first incubation program, providing support, resources, and funding for innovative blockchain startups.
+          li.timeline__item
+            .timeline__content
+              h3.timeline__date 2020
+              p.timeline__description
+                | GPT DAO partners with leading blockchain organizations and accelerators to expand its network and reach.
+          li.timeline__item
+            .timeline__content
+              h3.timeline__date 2021
+              p.timeline__description
+                | GPT DAO launches its decentralized governance platform, enabling community-driven decision-making and transparent governance.
+          li.timeline__item
+            .timeline__content
+              h3.timeline__date 2022
+              p.timeline__description
+                | GPT DAO becomes a leading player in the decentralized startup incubation space, with a portfolio of successful projects and a growing community of entrepreneurs and investors.
+      //FOOTER
+    include _footer
+    //- script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js')
+    //- script(src='/js/mapbox.js')
+    //- script(src='/js/login.js')
+    script(crossorigin="anonymous" src='https://js.stripe.com/v3/')
+    script(src='/js/bundle.js')
+
+
+
+
+

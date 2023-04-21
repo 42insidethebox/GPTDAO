@@ -1,0 +1,48 @@
+doctype html
+html 
+  head
+    block head 
+      meta(charset='UTF-8')
+      meta(name='viewport' content='width=device-width, initial-scale=1.0')
+      title GPTDao | #{title}
+      style
+        include ./css/style.css
+        include ./css/footer.css
+        include ./css/register.css  
+      link(rel='stylesheet' href='/css/footer.css')
+      link(rel='stylesheet' href='/css/style.css')
+      link(rel='stylesheet' href='/css/register.css')
+      link(rel='shortcut icon' type='image/png' href='img/favicon.png')
+      link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:300,300i,700')
+      script(src='/../../script.js')
+  body(data-alert=`${alert ? alert : ''}`)
+
+    include _header
+
+      //CONTENT
+    block content
+    .register-container
+      .div-align
+      .overlay(onclick="window.location.href='/'")
+      .modal
+        h1.register-text Create your account
+        .credentials-container
+          .register-credentials(method='POST' action='/api/auth/register')
+            label.register-label(for='username') Username
+            input#register-user(type='text' name='register-user')
+            label.register-label(for='email') Email
+            input#register-email(type='email' name='register-email')
+            label.register-label(for='password') Password
+            input#register-password(type='password' name='password')
+            .register-button-container
+              button.register-button(type='submit') Register
+            .already-registered.register-label
+              p
+                | Already have an account? 
+                a(href='/login') Login here!
+
+      //FOOTER
+
+    include _footer
+    script(crossorigin="anonymous" src='https://js.stripe.com/v3/')
+    script(src='/js/bundle.js')
