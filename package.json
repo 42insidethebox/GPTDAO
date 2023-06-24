@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Gptdao server",
   "main": "script.js",
+  "engines": {
+    "node": "19.x"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
