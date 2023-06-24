@@ -555,7 +555,9 @@ label.socials,
 .vote-btn,
 .ok-button,
 #proposal-type,
-#proposal-status {
+#proposal-status,
+.add-report-btn,
+#report-month {
   background-color: #007bff;
   color: #fff;
   border: none;
@@ -666,7 +668,6 @@ label.socials,
 #proposals-container {
   display: flex;
   flex-direction: column;
-  height: 100%;
 }
 
 #table-container {
@@ -796,7 +797,6 @@ label.socials,
   box-shadow: 4px 4px 9px rgba(0, 0, 0, 0.5);
   border-radius: 8px;
   padding: 2rem;
-  background-image: url("http://localhost:3000/images/41.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -824,6 +824,12 @@ label.socials,
 }
 
 /* Modal Subsections */
+
+.financial-header-section {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1.8rem;
+}
 #reports-modal .report-subsection {
   margin-top: 1em;
 }
@@ -864,15 +870,6 @@ label.socials,
   cursor: pointer;
 }
 /* Media Query for smaller screens */
-@media (max-width: 768px) {
-  #reports-modal.reports-modal {
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    transform: none;
-  }
-}
 
 .overlay {
   position: fixed;
@@ -894,7 +891,6 @@ label.socials,
 .modal-header,
 .modal-footer {
   display: flex;
-  border: 2px solid red;
   width: 100%;
   align-items: center;
   justify-content: space-around;
@@ -920,8 +916,8 @@ label.socials,
 
 .btn-cancel {
   background-color: transparent;
-  color: #007bff;
-  border: 2px solid #007bff;
+  color: white !important;
+  border: 1px solid transparent !important;
 }
 
 .btn-submit:hover,
@@ -934,6 +930,8 @@ label.socials,
 /* Form styles */
 .form-section {
   margin-bottom: 16px;
+  display: flex;
+  gap: 1rem;
 }
 
 .form-element {
@@ -942,10 +940,6 @@ label.socials,
 
 /* Media queries */
 @media (max-width: 768px) {
-  .modal-dialog.modal-lg {
-    max-width: 90%;
-  }
-
   .modal-title {
     font-size: 20px;
   }
@@ -1010,12 +1004,16 @@ label.socials,
   background-color: #fefefebf;
   padding: 20px;
   backdrop-filter: blur(10px) saturate(150%);
-
+  display: grid;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .proposal-modal {
   background-color: rgba(255, 255, 255, 0.85);
+  display: none;
+}
+.create-proposal-modal {
+  display: grid !important;
 }
 .modal-header {
   display: flex;
@@ -1052,7 +1050,7 @@ label.socials,
 }
 
 .form-section {
-  width: 60%;
+  width: 100% !important;
   margin-bottom: 20px;
 }
 
@@ -1086,7 +1084,6 @@ textarea.form-control {
 .btn-cancel {
   background-color: transparent;
   color: #007bff;
-  border: 2px solid #007bff;
 }
 
 .btn-submit:hover,
@@ -1098,10 +1095,6 @@ textarea.form-control {
 
 /* Media queries */
 @media (max-width: 768px) {
-  .modal-dialog.modal-lg {
-    width: 90%;
-  }
-
   .modal-title {
     font-size: 20px;
   }
@@ -1238,4 +1231,50 @@ p.activity-title,
 p.activity-date,
 a.activity-link {
   font-size: 12px;
+}
+
+.modal-change {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  z-index: 100;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content-change {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+  width: 80%;
+  max-width: 500px;
+  text-align: center;
+}
+
+.modal-change input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.modal-change button {
+  background-color: #4caf50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.modal button:hover {
+  opacity: 0.8;
 }

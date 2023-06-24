@@ -1,23 +1,12 @@
 const express = require("express");
 const viewsController = require("../controllers/viewsController");
 const asyncHandler = require("../utils/asyncHandler");
-const { checkAuthentication } = require("../middlewares/authMiddleware");
 
 const router = express.Router();
 
 // viewRouter.js
 
-router.get("/", checkAuthentication, (req, res) => {
-  if (req.isAuthenticated) {
-    res.render("index2", {
-      title: "Index2",
-    });
-  } else {
-    res.render("index", {
-      title: "Home",
-    });
-  }
-});
+router.get("/", viewsController.getIndex);
 
 // ...
 

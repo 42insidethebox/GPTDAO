@@ -124,3 +124,56 @@ exports.deleteUserAccount = async (req, res) => {
     res.status(500).json({ error: "Server error" });
   }
 };
+
+exports.verifyEmail = async (req, res) => {
+  const token = req.params.token;
+
+  // Find the user with the given token
+  const user = await User.findOne({ emailVerificationToken: token });
+
+  // If no user is found, send an error response
+  if (!user) {
+    return res.status(400).json({
+      status: "fail",
+      message: "Invalid verification token.",
+    });
+  }
+
+  // Mark the user's email as verified and remove the token
+  user.emailVerified = true;
+  user.emailVerificationToken = undefined;
+  await user.save();
+
+  // Send a success response
+  res.status(200).json({
+    status: "success",
+    message:
+      "Email successfully verified. You can now access the DAO and University features.",
+  });
+};
+
+exports.updateUserDisplayName = async (req, res) => {
+  try {
+    const user = await User.findByIdAndUpdate(
+      req.user.id,
+      { displayName: req.body.displayName },
+      { new: true, runValidators: true }
+    );
+    res.status(200).json({ success: true, data: user });
+  } catch (error) {
+    res.status(500).json({ success: false, error: "Server Error" });
+  }
+};
+
+exports.updateUserEmail = async (req, res) => {
+  try {
+    const user = await User.findByIdAndUpdate(
+      req.user.id,
+      { email: req.body.email },
+      { new: true, runValidators: true }
+    );
+    res.status(200).json({ success: true, data: user });
+  } catch (error) {
+    res.status(500).json({ success: false, error: "Server Error" });
+  }
+};

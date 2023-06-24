@@ -1,7 +1,31 @@
-exports.getIndex = (req, res) => {
-  const isLoggedIn = !!req.cookies.jwt; // check if jwt cookie is present
+const jwt = require("jsonwebtoken");
+const Report = require("../models/reportModel");
+const User = require("../models/userModel");
+exports.getIndex = async (req, res) => {
+  const token = req.cookies.jwt;
+  let loggedIn = false;
+  let isAdmin = false;
+  let user = null;
+  let reports = null;
+
+  if (token) {
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    user = await User.findById(decoded.id).select("-password");
+    loggedIn = true;
+    isAdmin = user.role === "admin";
+
+    // Fetch reports for the admin view
+    reports = isAdmin ? await Report.find() : null;
+    console.log("isAdmin:", isAdmin);
+  }
+
+  // Render the view
   res.status(200).render("index", {
     title: "Home",
+    user,
+    reports,
+    isAdmin,
+    loggedIn,
   });
 };
 
@@ -87,10 +111,21 @@ exports.getLogout = (req, res) => {
   res.redirect("/");
 };
 
-exports.getProfile = (req, res) => {
-  res.status(200).render("profile", {
-    title: "Profile",
-  });
+exports.getProfile = async (req, res) => {
+  try {
+    // Fetch the user details from the database using the user id stored in req.user
+    const user = await User.findById(req.user.id).select("-password");
+
+    // Render the profile view and pass the user object
+    res.status(200).render("profile", {
+      title: "Profile",
+      user, // this will pass the user object to your view
+    });
+  } catch (error) {
+    res.status(200).render("login", {
+      title: "Login",
+    });
+  }
 };
 
 exports.getIndex2 = (req, res) => {
@@ -98,3 +133,37 @@ exports.getIndex2 = (req, res) => {
     title: "Index2",
   });
 };
+
+exports.getIndex = async (req, res) => {
+  const token = req.cookies.jwt;
+  let loggedIn = false;
+  let isAdmin = false;
+  let user = null;
+  let reports = null;
+
+  if (token) {
+    try {
+      const decoded = jwt.verify(token, process.env.JWT_SECRET);
+      user = await User.findById(decoded.id).select("-password");
+      loggedIn = true;
+      isAdmin = user.role === "admin";
+
+      // Fetch reports for the admin view
+      reports = isAdmin ? await Report.find() : null;
+    } catch (err) {
+      // Error indicates JWT is expired or invalid. We could also specifically check for err.name === "TokenExpiredError"
+      loggedIn = false;
+    }
+  }
+
+  // Render the view
+  res.status(200).render("index", {
+    title: "Home",
+    user,
+    reports,
+    isAdmin,
+    loggedIn,
+  });
+};
+
+// Import the Report model at the top of your file

@@ -90,7 +90,6 @@ main h2 {
 }
 /* Hero Section Styles */
 #hero {
-  background-image: url("http://localhost:3000/images/033.png");
   background-size: cover;
   background-position: 50% 40%;
   color: #fff;
@@ -249,7 +248,8 @@ li.language-selector select,
 .btn-buy-tokens-cta,
 .btn-buy-nfts-cta,
 .btn-vote-cta,
-.enroll-button {
+.enroll-button,
+#sidebar button {
   background-color: #338feb;
   color: #fff;
   transition: all 0.3s;
@@ -627,8 +627,6 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  width: 100%;
   height: 100%;
 }
 

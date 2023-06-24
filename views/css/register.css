@@ -2,21 +2,15 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
-}
-
-.modal {
-  height: 70vh;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  min-height: 20rem;
-  width: 40%;
-  background-color: white;
-  padding: 8rem;
-  border-radius: 5px;
-  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
-  z-index: 10;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
 }
 
 .overlay {
@@ -30,31 +24,61 @@
   z-index: 5;
 }
 
-.div-align {
+.modal {
+  position: relative;
+  width: 80%;
+  max-width: 1000px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  overflow: hidden;
+}
+
+.modal-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
   height: 100%;
+}
+
+.modal-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+}
+
+.modal-left img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 101%;
+  object-fit: cover;
+}
+
+.modal-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 2rem;
+  box-sizing: inherit;
 }
 
 .register-text {
   font-size: 2.4rem;
-  display: block;
-  margin-bottom: 5rem;
+  margin-bottom: 1rem;
   text-align: center;
-}
-
-.credentials-container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
 }
 
 .register-credentials {
   display: flex;
   flex-direction: column;
   width: 100%;
-  gap: 2.6rem;
   max-width: 35rem;
 }
 
@@ -83,23 +107,22 @@
   margin-top: 2rem;
 }
 
-.register-button,
-.create-account-button {
+.register-button {
   padding: 1rem 2.5rem;
-  background-color: #2196f3;
+  background-color: #338feb;
   box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.5);
   border: none;
   border-radius: 0.6rem;
   font-size: 1.6rem;
-  color: #333333;
+  color: #fff;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
 
-.register-button:hover,
-.create-account-button:hover {
+.register-button:hover {
   transform: translateY(-2px);
-  box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, 0.7);
+  background-color: #0b69c6;
+  box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, 0, 0.7);
 }
 
 .already-registered {
@@ -113,28 +136,42 @@
   color: #007bff;
 }
 
-.forgot-password {
-  text-align: right;
-  margin-top: 1rem;
+@media screen and (max-width: 768px) {
+  .modal {
+    width: 95%;
+  }
+
+  .modal-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-left {
+    padding: 0;
+  }
+
+  .modal-right {
+    padding-top: 2rem;
+  }
+
+  .register-credentials {
+    max-width: 20rem;
+  }
 }
 
-.forgot-password a {
-  color: #2196f3;
-  font-weight: bold;
-  text-decoration: none;
-  transition: all 0.2s ease-in-out;
-}
-.forgot-password a:hover {
-  color: #2196f3;
-  text-decoration: underline;
+a:link,
+a:visited,
+a:hover {
+  color: #444 !important;
 }
 
-.new-here {
-  padding-top: 1.4rem;
-  text-align: center;
-  margin-top: 2rem;
+.error-message {
+  visibility: hidden;
+  margin: 0;
+  padding: 0;
+  line-height: 0.1;
+  color: red;
 }
 
-.login-label {
-  font-size: 1.2rem;
+.error-message p {
+  font-size: 14px;
 }

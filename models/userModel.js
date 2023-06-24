@@ -12,6 +12,11 @@ const UserSchema = new mongoose.Schema({
     required: true,
     unique: true,
   },
+  emailVerificationToken: String,
+  emailVerified: {
+    type: Boolean,
+    default: false,
+  },
   password: {
     type: String,
     required: true,
@@ -28,6 +33,56 @@ const UserSchema = new mongoose.Schema({
   profileImage: {
     type: String,
     default: "",
+  },
+  socialMediaHandles: {
+    twitter: {
+      type: String,
+      default: "",
+    },
+    linkedIn: {
+      type: String,
+      default: "",
+    },
+    cryptoWalletAddress: {
+      type: String,
+      default: "",
+    },
+  },
+  settings: {
+    profileVisibility: {
+      type: String,
+      enum: ["public", "private", "connections"],
+      default: "public",
+    },
+    emailNotifications: {
+      type: Boolean,
+      default: true,
+    },
+    pushNotifications: {
+      type: Boolean,
+      default: true,
+    },
+    smsNotifications: {
+      type: Boolean,
+      default: false,
+    },
+    dataSharing: {
+      type: Boolean,
+      default: false,
+    },
+    language: {
+      type: String,
+      default: "en",
+    },
+    timeZone: {
+      type: String,
+      default: "utc",
+    },
+    theme: {
+      type: String,
+      enum: ["light", "dark"],
+      default: "light",
+    },
   },
   coursesEnrolled: [
     {
@@ -47,12 +102,12 @@ const UserSchema = new mongoose.Schema({
       ref: "Vote",
     },
   ],
+
   createdAt: {
     type: Date,
     default: Date.now,
   },
 });
-
 // Hash the password before saving the user model
 UserSchema.pre("save", async function (next) {
   if (!this.isModified("password")) {

@@ -77,12 +77,20 @@ exports.loginUser = catchAsync(async (req, res) => {
   }
 });
 
-exports.getUserProfile = catchAsync(async (req, res) => {
+exports.getUserProfile = catchAsync(async (req, res, next) => {
   try {
+    console.log("Getting user profile for user id:", req.user.id); // log the id you're looking for
     const user = await User.findById(req.user.id).select("-password");
-    res.json(user);
+
+    if (!user) {
+      console.log("No user found"); // log if no user is found
+      return res.status(404).json({ message: "No user found with that ID" });
+    }
+
+    console.log("User found:", user); // log the user that was found
+    res.render("profile", { user: user });
   } catch (error) {
-    console.error(error);
-    res.status(500).json({ error: `${error.message}` });
+    console.error("Error getting user profile:", error); // log any error that happens
+    next(error);
   }
 });

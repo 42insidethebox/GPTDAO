@@ -4,17 +4,19 @@ html
     block head
       meta(charset='UTF-8')
       meta(name='viewport' content='width=device-width, initial-scale=1.0')
-      title GPTDao 
+      title GPTDao | #{title}
       style
         include ./css/style.css
         include ./css/footer.css
-        include ./css/slides.css
+        include ./css/profile.css
+
       link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css')  
       link(rel='stylesheet' href='/css/footer.css')
       link(rel='stylesheet' href='/css/style.css')
-      link(rel='stylesheet' href='/css/slides.css')
-
+      link(rel='stylesheet' href='/css/profile.css')
+      script(src='/../../profile.js')
       script(src='/../../script.js')
+      script(src='/../../proposal.js')
       link(rel='shortcut icon' type='image/png' href='img/favicon.png')
       link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:300,300i,700')
         
@@ -25,51 +27,158 @@ html
       //CONTENT
     block content
       main
-  section#hero
-    background-img(src='/images/033.png', alt='My Image') 
-    .container 
-    .container-head
-      h2 Leading the way in AI innovation
-      p.p-hero
-        | GPTDao is an AI-driven parent company that incubates and invests in
-        | a diverse portfolio of companies that are using AI to drive progress
-        | and generate returns. Learn more about our mission and how you can
-        | get involved by exploring our website.
-      p
-        a( class="go-to-whitepaper" href="/whitepaper") Learn more
-    .container
-    .container-about
-      h2 About GPTDao
-      p.p-about
-        | GPTDao is a parent company that specializes in the development and
-        | implementation of cutting-edge AI technology across a diverse range
-        | of industries. We invest in and incubate a portfolio of innovative
-        | companies that are using AI to solve real-world problems and drive
-        | progress.
-      p 
-        a(class="go-to-about", href="/about") Read more
+
+  if !loggedIn
+    section#hero(style="background-image: url('/images/33.png');")
+      .container 
+      .container-head
+        h2 Leading the way in AI innovation
+        p.p-hero
+          | GPTDao is an AI-driven parent company that incubates and invests in
+          | a diverse portfolio of companies that are using AI to drive progress
+          | and generate returns. Learn more about our mission and how you can
+          | get involved by exploring our website.
+        p
+          a( class="go-to-whitepaper" href="/whitepaper") Learn more
+      .container
+      .container-about
+        h2 About GPTDao
+        p.p-about
+          | GPTDao is a parent company that specializes in the development and
+          | implementation of cutting-edge AI technology across a diverse range
+          | of industries. We invest in and incubate a portfolio of innovative
+          | companies that are using AI to solve real-world problems and drive
+          | progress.
+        p 
+          a(class="go-to-about", href="/about") Read more
+  else
+
+        .governance-container              
+          .governance-feature
+            h3 Current DAO Balance
+            p.current-balance 0.123 BTC
+            h3 View Financial Reports
+            button.view-reports-btn View Reports
+          .governance-feature
+            h3 Proposals
+            div#proposals-container
+              div#table-container
+                table#proposal-table.proposal-table
+                  thead
+                    tr
+                      th Date
+                      th Proposal Name
+                      th Voting Percentage
+                      th Status
+                      th
+                  tbody#proposal-tbody-container
+
+              div#create-proposal-container
+                button.create-proposal-btn Create Proposal
+        section#proposal-modal
+        .modal#view-proposal-modal
+        .modal-dialog.modal-lg
+          .modal-content.proposal-modal
+            .modal-header
+              h5.modal-title Displaying Proposal
+              .modal-buttons
+                button.btn.btn-bookmark(type="button" onclick="bookmarkProposal()")
+                  svg.xmlns="http://www.w3.org/2000/svg"
+                    path(strokeLinecap="round" strokeLinejoin="round", d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0", fill="none", viewBox="0 0 24 24", strokeWidth="1.5", stroke="currentColor", class="w-6 h-6")
+
+                button.btn.btn-share.btn-close-proposal-modal(type="button" onclick="shareProposal()")
+                  svg.xmlns="http://www.w3.org/2000/svg"
+                    path(stroke-linecap="round" stroke-linejoin="round", d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z", fill="none", viewBox="0 0 24 24", stroke-width="1.5", stroke="currentColor", class="w-6 h-6")
+
+                button.btn.btn-subscribe(type="button" onclick="subscribe()")
+                  svg.xmlns="http://www.w3.org/2000/svg"
+                    path(stroke-linecap="round" stroke-linejoin="round", d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0M3.124 7.5A8.969 8.969 0 015.292 3m13.416 0a8.969 8.969 0 012.168 4.5", fill="none", viewBox="0 0 24 24", stroke-width="1.5", stroke="currentColor", class="w-6 h-6")
+              button.close(type="button" data-dismiss="modal" aria-label="Close")
+                span(class="close-proposal-modal",aria-hidden="true") &times;
+            .modal-body
+              .form-section
+                .form-element
+                  label(for="view-proposal-type") Proposal Type
+                  p#view-proposal-type
+                .form-element
+                  label(for="view-proposal-title") Title
+                  p#view-proposal-title
+              .form-section
+                .form-element
+                  label(for="view-proposal-description") Description
+                  p#view-proposal-description
+              .form-section
+                .form-element
+                  label(for="view-proposal-audience") Target Audience
+                  p#view-proposal-audience
+                .form-element
+                  label(for="view-proposal-status") Current Status
+                  p#view-proposal-status
+              .form-section
+                .form-element
+                  label(for="view-proposal-kpi") Key Performance Indicators (KPIs)
+                  p#view-proposal-kpi
+                .form-element
+                  label(for="view-proposal-risks") Risks and Challenges
+                  p#view-proposal-risks
+              .form-section
+                .form-element
+                  label(for="view-proposal-dependencies") Dependencies
+                  p#view-proposal-dependencies
+                .form-element
+                  label(for="view-proposal-ownership") Ownership and Governance Structure
+                  p#view-proposal-ownership
+              .form-section
+                .form-element
+                  label(for="view-proposal-ip") Intellectual Property Rights and Licensing
+                  p#view-proposal-ip
+                .form-element
+                  label(for="view-proposal-nda") Confidentiality or Non-Disclosure Agreement Requirements
+                  p#view-proposal-nda
+              .form-section
+                .form-element
+                  label(for="view-proposal-social-impact") Social Impact
+                  p#view-proposal-social-impact
+                .form-element
+                  label(for="view-proposal-diversity") Diversity and Inclusion Policies
+                  p#view-proposal-diversity
+              .form-section
+                .form-element
+                  label(for="view-proposal-link") Link 
+                  p#view-proposal-link
+                .form-element
+                  label(for="view-proposal-budget") Budget (ETH)
+                  p#view-proposal-budget
+            .modal-footer
+              button.btn.btn-vote-for(type="button" onclick="voteForProposal()") Vote For
+              button.btn.btn-vote-against(type="button" onclick="voteAgainstProposal()") Vote Against
+
+ 
+        
+
   section#portfolio
     .container
       h2.portfolio Portfolio
       .container-cards
+
         .card
-          img(src='/images/03.png' alt='Image 1')
+          img(src='/images/599.png' alt='Image 1')
           .card-content
-            h1 Card 1 Heading
+            h1 HSL Services
             p
               | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel elit id elit sagittis laoreet vitae at mi.
             a.enroll-button(href='#') Enroll
         .card
-          img(src='/images/01.png' alt='Image 1')
+          img(src='/images/455.png' alt='Image 1')
           .card-content
-            h1 Card 1 Heading
+            h1 TripHive
             p
               | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel elit id elit sagittis laoreet vitae at mi.
             a.enroll-button(href='#') Enroll
         .card
-          img(src='/images/05.png' alt='Image 1')
+          img(src='/images/588.png' alt='Image 1')
           .card-content
-            h1 Card 1 Heading
+            h1 Mandarin App
             p
               | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel elit id elit sagittis laoreet vitae at mi.
             a.enroll-button(href='#') Enroll
@@ -93,47 +202,205 @@ html
 
   
 
-  .cta-gallery
-    .cta-actions
-      button.btn.btn-register.btn-register-cta(data-slide="register-slide", style="transform: translateY(-20%); background-color:#0b69c6 ") Register
-      button.btn.btn-buy-tokens.btn-buy-tokens-cta(data-slide="buy-tokens-slide") Buy Tokens
-      button.btn.btn-buy-nfts.btn-buy-nfts-cta(data-slide="buy-nfts-slide") Buy NFTs
-      button.btn.btn-vote.btn-vote-cta(data-slide="voting-slide") Vote on Projects
-  .cta-modal
-    #register-slide.slide.active
-      h3 Register
-      p Register for a GPTDao account and become a part of our growing community.
-      .cta-form-container
-        form(class="cta-form", action='/register', method='post')
-          label(for='username') Username
-          input(type='text', name='username', id='username', required)
-          
-          label(for='email') Email
-          input(type='email', name='email-register', id='email', required)
-          
-          label(for='password') Password
-          input(type='password', name='password', id='password', required)
-          
-          button(class="btn btn-signup", type='submit') Sign Up
+  
+include _footer
+.overlay
+div#reports-modal.reports-modal(style="background-image: url('/images/33.png');")
+  div.modal-content
+    span.close-modal-btn &times;
+    h1 Financial Report of the DAO
+    .financial-header-section
+      select#report-month
+      if isAdmin
+        button.add-report-btn Add Report
+    if isAdmin
+      .form-report-modal
+        form(id="add-report-form" action="/api/v1/reports" method="POST")
+          input(type="text" name="month" placeholder="Month")
+          input(type="number" name="revenue[tokenSales][numberOfTokensSold]" placeholder="Number of Tokens Sold")
+          input(type="number" name="revenue[tokenSales][pricePerToken]" placeholder="Price per Token")
+          input(type="number" name="revenue[totalRevenue]" placeholder="Total Revenue")
+          input(type="number" name="expenses[cost]" placeholder="Cost")
+          input(type="number" name="expenses[totalExpenses]" placeholder="Total Expenses")
+          input(type="number" name="profitLoss" placeholder="Profit or Loss")
+          button(type="submit") Confirm
 
-    #buy-tokens-slide.slide
-      h3 Buy Tokens
-      p Purchase GPTDao tokens through PancakeSwap and invest in our projects.
-      iframe(src='https://pancakeswap.finance/swap?outputCurrency=0x8076c74c5e3f5852037f31ff0093eeb8c8add8d3', width='100%', height='500px', frameborder='0', allowfullscreen)
+    div.report-section
+      h2 Revenue
+      div.report-subsection
+        h3 Token Sales
+        p.sale-details(id="tokens-sold")
+        p.sale-details(id="token-price")
+      div.report-total
+        h3(id="total-expenses")
+    div.report-section
+      h2 Profit/Loss
+      div.report-total
+        h3(id="total-revenue")
+        h3(id="total-expenses")
+        h3(id="total-profit-loss")
+    div.button-section
+      button.ok-button Ok
 
 
-    #buy-nfts-slide.slide
-      h3 Buy NFTs
-      p Explore and buy unique NFTs from our OpenSea collection, created by talented artists.
-      iframe(src='https://opensea.io/nftinitcom_DM-OTC', width='100%', height='500px', frameborder='0', allowfullscreen)
-
-    #voting-slide.slide
-      h3 Vote on Projects
-      p Your votes shape the future of GPTDao. Participate in voting and decide which projects we should invest in.
-      a(href='/projects-voting') Go to Voting Page
+    //- script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js')
+    //- script(src='/js/mapbox.js')
+    //- script(src='/js/login.js')
+.modal#create-proposal-modal
+  .modal-dialog.modal-lg
+    .modal-content.proposal-modal.create-proposal-modal
+      .modal-header
+        h5.modal-title Create New Proposal
+        button.close.close-new-proposal(type="button" data-dismiss="modal" aria-label="Close")
+          span(aria-hidden="true") &times;
+      .modal-body
+        form#create-proposal-form
+          .form-section
+            .form-element
+              label(for="proposal-type") Proposal Type
+              select#proposal-type.form-control(required)
+                option(value="") Select a proposal type
+                option(value="company") Company
+                option(value="investment") Investment
+                option(value="learning-opportunity") Learning Opportunity
+                option(value="software") Software
+                option(value="invention") Invention
+                // Add more options as needed
+          .form-section
+            .form-element
+              label(for="proposal-title") Title
+              input#proposal-title.form-control(type="text" placeholder="Enter proposal title" required)
+            .form-element
+              label(for="proposal-description") Description
+              textarea#proposal-description.form-control(rows="3" placeholder="Enter proposal description" required)
+          .form-section
+            .form-element
+              label(for="proposal-audience") Target Audience
+              input#proposal-audience.form-control(type="text" placeholder="Enter target audience")
+            .form-element
+              label(for="proposal-status") Current Status
+              select#proposal-status.form-control(required)
+                option(value="") Select current status
+                option(value="idea") Idea
+                option(value="in-progress") In Progress
+                option(value="completed") Completed
+          .form-section
+            .form-element
+              label(for="proposal-kpi") Key Performance Indicators (KPIs)
+              textarea#proposal-kpi.form-control(rows="3" placeholder="Enter KPIs to measure success")
+            .form-element
+              label(for="proposal-risks") Risks and Challenges
+              textarea#proposal-risks.form-control(rows="3" placeholder="Enter risks and challenges")
+          .form-section
+            .form-element
+              label(for="proposal-dependencies") Dependencies
+              textarea#proposal-dependencies.form-control(rows="3" placeholder="Enter dependencies")
+            .form-element
+              label(for="proposal-ownership") Ownership and Governance Structure
+              textarea#proposal-ownership.form-control(rows="3" placeholder="Enter ownership and governance structure")
+          .form-section
+            .form-element
+              label(for="proposal-ip") Intellectual Property Rights and Licensing
+              textarea#proposal-ip.form-control(rows="3" placeholder="Enter intellectual property rights and licensing information")
+            .form-element
+              label(for="proposal-nda") Confidentiality or Non-Disclosure Agreement Requirements
+              textarea#proposal-nda.form-control(rows="3" placeholder="Enter confidentiality or non-disclosure agreement requirements")
+          .form-section
+            .form-element
+              label(for="proposal-social-impact") Social Impact
+              textarea#proposal-social-impact.form-control(rows="3" placeholder="Enter social impact or environmental considerations")
+            .form-element
+              label(for="proposal-diversity") Diversity and Inclusion Policies
+              textarea#proposal-diversity.form-control(rows="3" placeholder="Enter diversity and inclusion policies")
+          .form-section
+            .form-element
+              label(for="proposal-attachments") Attachments
+              input#proposal-attachments.form-control(type="file" multiple)
+            .form-element
+              label(for="proposal-link") Link 
+              input#proposal-link.form-control(type="url" placeholder="Enter a link to more information")
+          .form-section
+            .form-element
+              label(for="proposal-budget") Budget (ETH)
+                input#proposal-budget.form-control(type="number" min="0" step="0.01" placeholder="Enter budget in ETH")
+        .modal-footer
+          button.btn.btn-submit(type="button" onclick="submitProposal()") Submit Proposal
+          button.btn.btn-cancel(type="button" data-dismiss="modal") Cancel
+div.overlay
+.modal#cancel-confirmation-modal
+  .modal-dialog.modal-sm
+    .modal-content
+      .modal-header
+        h5.modal-title Cancel Confirmation
+      .modal-body
+        p Are you sure you want to cancel? All information will be lost.
+      .modal-footer
+        button.btn.btn-confirm(type="button") OK
+        button.btn.btn-deny(type="button") Cancel 
+.modal#view-proposal-modal
+  .modal-dialog.modal-lg
+    .modal-content.view-proposal-modal
+      .modal-header
+        h5.modal-title View Proposal
+        button.close(type="button" data-dismiss="modal" aria-label="Close")
+          span(aria-hidden="true") &times;
+      .modal-body
+        .form-section
+          .form-element
+            label(for="view-proposal-type") Proposal Type
+            p#view-proposal-type
+          .form-element
+            label(for="view-proposal-title") Title
+            p#view-proposal-title
+          .form-element
+            label(for="view-proposal-description") Desvdscription
+            p#view-proposal-description
+        .form-section
+          .form-element
+            label(for="view-proposal-audience") Target Audience
+            p#view-proposal-audience
+          .form-element
+            label(for="view-proposal-status") Current Status
+            p#view-proposal-status
+        .form-section
+          .form-element
+            label(for="view-proposal-kpi") Key Performance Indicators (KPIs)
+            p#view-proposal-kpi
+          .form-element
+            label(for="view-proposal-risks") Risks and Challenges
+            p#view-proposal-risks
+        .form-section
+          .form-element
+            label(for="view-proposal-dependencies") Dependencies
+            p#view-proposal-dependencies
+          .form-element
+            label(for="view-proposal-ownership") Ownership and Governance Structure
+            p#view-proposal-ownership
+        .form-section
+          .form-element
+            label(for="view-proposal-ip") Intellectual Property Rights and Licensing
+            p#view-proposal-ip
+          .form-element
+            label(for="view-proposal-nda") Confidentiality or Non-Disclosure Agreement Requirements
+            p#view-proposal-nda
+        .form-section
+          .form-element
+            label(for="view-proposal-social-impact") Social Impact
+            p#view-proposal-social-impact
+          .form-element
+            label(for="view-proposal-diversity") Diversity and Inclusion Policies
+            p#view-proposal-diversity
+        .form-section
+          .form-element
+            label(for="view-proposal-link") Link 
+            p#view-proposal-link
+          .form-element
+            label(for="view-proposal-budget") Budget (ETH)
+            p#view-proposal-budget
+        .modal-footer
+          button.btn.btn-cancel(type="button" data-dismiss="modal") Close
 
   
-  include _footer
     //- script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js')
     //- script(src='/js/mapbox.js')
     //- script(src='/js/login.js')

@@ -13,8 +13,14 @@ exports.protectRoute = async (req, res, next) => {
   try {
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
     req.user = await User.findById(decoded.id);
+    console.log(req.user);
     next();
   } catch (error) {
+    if (error instanceof jwt.TokenExpiredError) {
+      return res
+        .status(401)
+        .json({ error: "Token expired, please log in again" });
+    }
     res.status(401).json({ error: "Invalid token, authorization denied" });
   }
 };
@@ -44,5 +50,16 @@ exports.checkAuthentication = async (req, res, next) => {
     req.isAuthenticated = false;
   }
 
+  next();
+};
+
+exports.checkEmailVerified = (req, res, next) => {
+  if (!req.user.emailVerified) {
+    return res.status(403).json({
+      status: "fail",
+      message:
+        "Your email is not verified. Please verify your email to access this feature.",
+    });
+  }
   next();
 };

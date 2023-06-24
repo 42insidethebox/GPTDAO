@@ -1,8 +1,12 @@
-/* Base styles */
 body {
   font-family: "Lato", sans-serif;
   line-height: 1.6;
   color: #333;
+}
+
+.div-2-cols {
+  display: grid;
+  grid-template-columns: 2.5fr 1fr;
 }
 
 a {
@@ -48,9 +52,7 @@ img {
 
 /* Container */
 .container {
-  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.5rem;
 }
 
 /* Grid */
@@ -131,6 +133,8 @@ img {
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 1.5rem;
+  margin-right: 2rem;
+  max-width: 600px;
 }
 
 #sidebar h2 {
@@ -220,6 +224,11 @@ img {
 /* Remaining elements */
 #news-page {
   margin-bottom: 2rem;
+}
+
+#news-page,
+#sidebar {
+  margin-top: 10rem;
 }
 
 #main-content {

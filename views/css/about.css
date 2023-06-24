@@ -33,7 +33,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url("http://localhost:3000/images/unicorn.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 40%;
@@ -296,15 +295,15 @@
 
 .timeline__item {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 50px 0;
   margin: 0 0;
   position: relative;
 }
 
 .timeline__content {
-  width: calc(50% - 40px);
+  width: 100%;
+  height: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;

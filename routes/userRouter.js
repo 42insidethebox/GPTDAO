@@ -3,12 +3,17 @@ const router = express.Router();
 const { check } = require("express-validator");
 const authController = require("../controllers/authController");
 const authenticateJWT = require(".././middlwares/auth");
+const { verifyEmail } = require("../controllers/userController");
+const viewsController = require("../controllers/viewsController");
+
 const {
   getUsers,
   getUser,
   createUser,
   updateUser,
   deleteUser,
+  updateUserDisplayName,
+  updateUserEmail, // Add this line to import the function
 } = require("../controllers/userController");
 
 router
@@ -24,6 +29,19 @@ router
   .put(authenticateJWT.protectRoute, updateUser)
   .delete(authenticateJWT.protectRoute, deleteUser);
 
-router.get("/profile", authController.getUserProfile);
+router.get(
+  "/profile",
+  authenticateJWT.protectRoute,
+  viewsController.getProfile
+);
+
+router.get("/verify-email/:token", verifyEmail);
+
+router.patch(
+  "/update-name",
+  authenticateJWT.protectRoute,
+  updateUserDisplayName
+);
+router.patch("/update-email", authenticateJWT.protectRoute, updateUserEmail);
 
 module.exports = router;

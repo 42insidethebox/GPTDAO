@@ -13,6 +13,8 @@ link(rel="stylesheet", href="/css/join-us.css")
 link(rel="stylesheet", href="/css/footer.css")
 link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css')
 script(src='/../../script.js')
+script(src='/../../join.js')
+
 
 body
 include _header
@@ -55,14 +57,14 @@ ul#internship-list
     img(src="/images/26.png")
     h3 AI Developer
     p
-      | We are seeking an experienced AI developer to join our team and contribute to the development of cutting-edge AI applications.
+      | We are seeking a volunteer AI developer to join our team and contribute to the development of cutting-edge AI applications.
     .apply-container
       button.apply-button Apply Now
     li
       img(src="/images/27.png")
       h3 UX/UI Designer
       p
-        | We are seeking an experienced UX/UI designer to join our team and contribute to the design of intuitive and engaging user interfaces for our applications.
+        | We are seeking a passionate UX/UI designer to join our team and contribute to the design of intuitive and engaging user interfaces for our applications.
       .apply-container
         button.apply-button Apply Now
     li
@@ -97,7 +99,7 @@ ul#internship-list
       img(src="/images/32.png")
       h3 Robotics Engineer
       p
-        | We are seeking a robotics engineer to help us build and maintain our robotic systems.
+        | We are seeking an robotics engineer to help us build and maintain our robotic systems.
       .apply-container
         button.apply-button Apply Now
     li
@@ -136,6 +138,53 @@ ul#internship-list
       .apply-container
         button.apply-button Apply Now
       
+.modal#application-modal
+  .modal-content
+    .modal-header
+      span.close &times;
+      h2 Apply for a Position
+    .modal-body
+      form(id="application-form")
+        label(for="position") Position
+        input#position(type="text", name="position", required=true)
+
+        label(for="name") Name
+        input#name(type="text", name="name", required=true)
+
+        label(for="email") Email
+        input#email(type="email", name="email", required=true)
+
+        label(for="message") Message
+        textarea#message(name="message", required=true)
+
+        label(for="resume") Resume (URL)
+        input#resume(type="text", name="resume", required=true)
+
+        label(for="linkedIn") LinkedIn Profile (URL)
+        input#linkedIn(type="text", name="linkedIn")
+
+        label(for="github") GitHub Profile (URL)
+        input#github(type="text", name="github")
+
+        label(for="portfolio") Portfolio (URL)
+        input#portfolio(type="text", name="portfolio")
+
+        label(for="knownTechnologies") Known Technologies
+        input#knownTechnologies(type="text", name="knownTechnologies")
+
+        label(for="languages") Languages
+        input#languages(type="text", name="languages")
+
+        label(for="availability") Availability
+        select#availability.btn(name="availability")
+          option(value="") -- select one --
+          option(value="Full-time") Full-time
+          option(value="Part-time") Part-time
+
+        label(for="additionalInformation") Additional Information
+        textarea#additionalInformation(name="additionalInformation")
+
+        button.btn(type="submit") Submit Application
 
 
 include _footer

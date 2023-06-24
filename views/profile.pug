@@ -13,6 +13,7 @@ html
       link(rel='stylesheet' href='/css/profile.css')
       link(rel='stylesheet' href='/css/footer.css')
       link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css')
+      script(src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.5/js.cookie.min.js")
       script(src='/../../script.js')
       script(src='/../../profile.js')
       link(rel='shortcut icon' type='image/png' href='img/favicon.png')
@@ -34,19 +35,18 @@ html
               img(src="/images/38.png", alt="User Profile Image")
               span + 
               label(for='profile-image' class='change-image') Change Profile Picture
-          .username
-            p#username Username
+          if(user)
+            .username
+              p#username=user.username
+
           .name-email-container
-            .name
-              p#user-name John Doe
-              button(type='button' class='modify-name btn') Modify
             .email
-              p#user-email johndoe@example.com
+              p#user-email=user.email
               button(type='button' class='modify-email btn') Modify
           #personal-info.container-profile
           form.user-personal-info
             .bio
-              textarea(name='bio', id='bio', rows='5', cols='50', placeholder='Bio...')
+              textarea(name='bio', id='bio', rows='5', cols='50', placeholder='Bio...')= user.bio || ''
             
             
           .social-media
@@ -62,7 +62,6 @@ html
               input(type='text', id='crypto-wallet', name='crypto-wallet', placeholder='Enter your crypto wallet address')
 
         section#settings.container-profile
-          h2.h2-settings Settings
           form#settings-form
             .settings-form-content
               .profile-visibility
@@ -117,101 +116,9 @@ html
                 a(href='/delete-account') Delete Account
             .settings-form-button
               button(type='submit', class='btn btn-save-settings') Save Settings
-        .governance-container
-              
-          .governance-feature
-            h3 Current DAO Balance
-            p.current-balance 0.123 BTC
-            h3 View Financial Reports
-            button.view-reports-btn View Reports
-          .governance-feature
-            h3 Proposals
-            div#proposals-container
-              div#table-container
-                table#proposal-table.proposal-table
-                  thead
-                    tr
-                      th Date
-                      th Proposal Name
-                      th Voting Percentage
-                      th Status
-                      th
-                  tbody#proposal-tbody-container
-                    tr.proposal-row
-                      td.date 01/01/2023
-                      td.proposal-name
-                        a(href='#') Proposal 1
-                      td.voting-percentage 70%
-                      td.status Active
-                      td.vote-cell
-                        button.vote-btn Vote
-                    tr.proposal-row
-                      td.date 01/02/2023
-                      td.proposal-name
-                        a(href='#') Proposal 2
-                      td.voting-percentage 40%
-                      td.status Expired
-                      td.vote-cell
-                        button.vote-btn.disabled Vote
-                    tr.proposal-row
-                      td.date 01/03/2023
-                      td.proposal-name
-                        a(href='#') Proposal 3
-                      td.voting-percentage 90%
-                      td.status Active
-                      td.vote-cell
-                        button.vote-btn Vote
-                    tr.proposal-row
-                      td.date 01/01/2023
-                      td.proposal-name
-                        a(href='#') Proposal 1
-                      td.voting-percentage 70%
-                      td.status Active
-                      td.vote-cell
-                        button.vote-btn Vote
-                    tr.proposal-row
-                      td.date 01/02/2023
-                      td.proposal-name
-                        a(href='#') Proposal 2
-                      td.voting-percentage 40%
-                      td.status Expired
-                      td.vote-cell
-                        button.vote-btn.disabled Vote
-                    tr.proposal-row
-                      td.date 01/03/2023
-                      td.proposal-name
-                        a(href='#') Proposal 3
-                      td.voting-percentage 90%
-                      td.status Active
-                      td.vote-cell
-                        button.vote-btn Vote
-                    tr.proposal-row
-                      td.date 01/01/2023
-                      td.proposal-name
-                        a(href='#') Proposal 1
-                      td.voting-percentage 70%
-                      td.status Active
-                      td.vote-cell
-                        button.vote-btn Vote
-                    tr.proposal-row
-                      td.date 01/02/2023
-                      td.proposal-name
-                        a(href='#') Proposal 2
-                      td.voting-percentage 40%
-                      td.status Expired
-                      td.vote-cell
-                        button.vote-btn.disabled Vote
-                    tr.proposal-row
-                      td.date 01/03/2023
-                      td.proposal-name
-                        a(href='#') Proposal 3
-                      td.voting-percentage 90%
-                      td.status Active
-                      td.vote-cell
-                        button.vote-btn Vote
-              div#create-proposal-container
-                button.create-proposal-btn Create Proposal
-
+        .governance-container              
+        .my-proposals
+        
         section#user-activity.container-profile
           h2#h2-user-activity User Activity
           .activity-list
@@ -378,13 +285,21 @@ div.overlay
       .modal-footer
         button.btn.btn-confirm(type="button") OK
         button.btn.btn-deny(type="button") Cancel
+// Add these lines at the end of your Pug file
+#name-modal.modal-change
+  .modal-content-change
+    h2 Modify Name
+    input(type='text', id='name-input', name='name', value='John Doe')
+    button(type='button', class='btn btn-save-name') Save
+
+#email-modal.modal-change
+  .modal-content-change
+    h2 Modify Email
+    input(type='email', id='email-input', name='email', value='johndoe@example.com')
+    button(type='button', class='btn btn-save-email') Save
 
 
 
-include _footer
-    //- script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js')
-    //- script(src='/js/mapbox.js')
-    //- script(src='/js/login.js')
 include _footer
     //- script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js')
     //- script(src='/js/mapbox.js')

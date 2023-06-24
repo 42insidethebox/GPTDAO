@@ -1,26 +1,32 @@
 section#submit-proposal
-  h2 Submit Your Proposal
-  p.p-footer
-    | If you have an idea or project you'd like to collaborate on, we'd love to hear from you. Submit your proposal through our platform, and if it's a great fit for our community, we'll work together to bring it to life and reward you with tokens and NFTs.
+  .submit-proposal-container
+    h2 Contact us
+    p.p-footer
+      | If you have an idea or project you'd like to collaborate on or if you found a bug, we'd love to hear from you. Submit a private message through this form. In case you have a public proposal that you wish to be voted, you can do so by logging into your account. If it's a great fit for our community, we'll work together to bring it to life and reward you with tokens and NFTs.
 
-  form(id="form-footer", action="#" method="post")
-    label(for="name") Name
-    input#name(type="text" name="name" required)
-    label(for="email") Email
-    input#email(type="email" name="email" required)
-    label(for="proposal") Proposal
-    textarea#proposal(name="proposal" rows="10" cols="50" placeholder="Write your proposal here.." required)
-    label(for="file") Attach File
-    input#file(type="file" name="file" accept=".pdf,.doc,.docx")
-    button.apply-button(type="submit") Submit Proposal
+    form(id="form-footer", action="#" method="post")
+      label(for="name") Name
+      input#name(type="text" name="name" required)
+      label(for="email") Email
+      input#email(type="email" name="email" required)
+      label(for="proposal") Proposal
+      textarea#proposal(name="proposal" rows="10" cols="50" placeholder="Write your proposal here.." required)
+      button.apply-button(type="submit") Submit Proposal
 
 footer#main-footer
   .container.footer-container
     .row
       .col-md-4.footer-brand
         a.brand-logo(href="/")
-          img(src="img/logo.png", alt="GPT-DAO Logo")
+          h1#nav-icon GPTDao
         p.footer-description GPT-DAO is a decentralized autonomous organization focused on advancing AI technology through open collaboration.
+      .col-md-4.footer-newsletter
+        h3 Newsletter
+        .newsletter-content
+          p.subscribe-to Subscribe to our newsletter to stay updated on our latest developments and events.
+          form(action="/subscribe", method="POST")
+            input(type="email", name="email", placeholder="Enter your email", required)
+            button(type="submit") Subscribe
       .col-md-4.footer-links
         h3 Quick Links
         ul
@@ -34,27 +40,34 @@ footer#main-footer
             a(href="/resources") Resources
           li
             a(href="/contact") Contact Us
-      .col-md-4.footer-newsletter
-        h3 Newsletter
-        .newsletter-content
-          p Subscribe to our newsletter to stay updated on our latest developments and events.
-          form(action="/subscribe", method="POST")
-            input(type="email", name="email", placeholder="Enter your email", required)
-            button(type="submit") Subscribe
+          li
+            a(href="/contact") Create proposal
+          li
+            a(href="/contact") Contact Us
+          li
+            a(href="/contact") Contact Us
+          li
+            a(href="/contact") Contact Us
+          li
+            a(href="/contact") Contact Us
+          li
+            a(href="/contact") Contact Us
     .row.footer-social
       h3 Follow Us
-      ul.social-icons
+      .social-icons
         li
           a(href="https://www.facebook.com/gptdao", target="_blank")
-            i.fas.fa-facebook-f
+            img(class="social-icon", src="/images/facebook-icon.png")
         li
           a(href="https://www.twitter.com/gptdao", target="_blank")
-            i.fas.fa-twitter
+            img(class="social-icon", src="/images/twitter-icon.png")
         li
           a(href="https://www.linkedin.com/company/gptdao", target="_blank")
-            i.fas.fa-linkedin-in
+            img(class="social-icon", src="/images/telegram-icon.png")
         li
           a(href="https://github.com/gptdao", target="_blank")
-            i.fas.fa-github
+            img(class="social-icon", src="/images/github-icon.png")
+
+
     .row.footer-copyright
-      p &copy; #{new Date().getFullYear()} GPT-DAO. All rights reserved.
+      p &copy; #{new Date().getFullYear()} GPTDAO. All rights reserved.
