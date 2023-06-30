@@ -14,6 +14,7 @@ p {
 .p-about {
   font-size: 16px;
 }
+q
 
 /* Header Styles */
 header {
@@ -344,6 +345,8 @@ li.language-selector select {
 }
 .card-content {
   padding: 20px;
+  display: flex;
+  flex-direction: column;
 }
 .card h1 {
   font-size: 24px;

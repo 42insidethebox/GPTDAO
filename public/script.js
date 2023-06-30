@@ -370,3 +370,48 @@ document.addEventListener("DOMContentLoaded", function () {
   updateNavMenu();
   window.addEventListener("resize", updateNavMenu);
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Get all .enroll-button and .apply-button elements
+  const enrollButtons = document.querySelectorAll(".enroll-button");
+  const applyButtons = document.querySelectorAll(".apply-button");
+
+  // Get the modal content and the close button
+  const modalContent = document.querySelector(".routeNotDefinedModal-content");
+  const closeButton = modalContent.querySelector(".routeNotDefinedModal-close");
+
+  // Add event listeners to enroll buttons
+  enrollButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      console.log("Enroll button clicked"); // Log the click event
+      modalContent.style.display = "block"; // Show the modal content
+    });
+  });
+
+  // Add event listeners to apply buttons
+  applyButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      console.log("Apply button clicked"); // Log the click event
+      modalContent.style.display = "block"; // Show the modal content
+    });
+  });
+
+  // Add event listener to the close button
+  closeButton.addEventListener("click", () => {
+    modalContent.style.display = "none"; // Hide the modal content
+  });
+
+  // Add event listener to the document to close the modal when clicking outside
+  document.addEventListener("click", (event) => {
+    const target = event.target;
+    const isEnrollButton = Array.from(enrollButtons).some((button) =>
+      button.contains(target)
+    );
+    const isApplyButton = Array.from(applyButtons).some((button) =>
+      button.contains(target)
+    );
+    if (!modalContent.contains(target) && !isEnrollButton && !isApplyButton) {
+      modalContent.style.display = "none"; // Hide the modal content
+    }
+  });
+});

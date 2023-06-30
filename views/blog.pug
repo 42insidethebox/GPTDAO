@@ -8,8 +8,13 @@ html
       style
         include ./css/style.css
         include ./css/footer.css
+        include ./css/blog.css
+
       link(rel='stylesheet' href='/css/footer.css')
       link(rel='stylesheet' href='/css/style.css')
+      link(rel='stylesheet' href='/css/blog.css')
+
+
       link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css')
       link(rel='shortcut icon' type='image/png' href='img/favicon.png')
       link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:300,300i,700')
@@ -20,7 +25,27 @@ html
 
       //CONTENT
     block content
-      h1 This is a placeholder heading  
+      h1 This is a placeholder heading
+      div#routeNotDefinedModalOverlay
+    #routeNotDefinedModal.routeNotDefinedModal
+    .overlay
+    .routeNotDefinedModal-content
+      span.routeNotDefinedModal-close &times;
+      .routeNotDefined-Modal-content-container
+        img(src="/images/562.png", alt="Work in progress")
+      h2 This route is not yet defined  
+      p 
+        | At GPTDAO, we believe in the strength of our global community. While this is a vast project, 
+        | the combined efforts of our dedicated contributors make it possible to overcome any challenge. 
+        | We deeply value each and every individual who joins us on this journey.
+        | 
+        | The page you are looking for is currently under construction, a sign of our continuous growth and development. 
+        | We apologize for any inconvenience, and appreciate your understanding and patience.
+        |
+        | Remember, every individual makes a difference in GPTDAO. With collective effort, 
+        | we are not just building faster - we are building stronger. 
+        | Thank you for being a part of this exciting journey. 
+  
       //FOOTER
 
     include _footer

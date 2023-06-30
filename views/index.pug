@@ -9,11 +9,15 @@ html
         include ./css/style.css
         include ./css/footer.css
         include ./css/profile.css
+        include ./css/blog.css
+
 
       link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css')  
       link(rel='stylesheet' href='/css/footer.css')
       link(rel='stylesheet' href='/css/style.css')
       link(rel='stylesheet' href='/css/profile.css')
+      link(rel='stylesheet' href='/css/blog.css')
+
       script(src='/../../profile.js')
       script(src='/../../script.js')
       script(src='/../../proposal.js')
@@ -27,6 +31,8 @@ html
       //CONTENT
     block content
       main
+
+ 
 
   if !loggedIn
     section#hero(style="background-image: url('/images/33.png');")
@@ -167,21 +173,22 @@ html
             h1 HSL Services
             p
               | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel elit id elit sagittis laoreet vitae at mi.
-            a.enroll-button(href='#') Enroll
+            button.enroll-button Enroll
         .card
           img(src='/images/455.png' alt='Image 1')
           .card-content
             h1 TripHive
             p
               | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel elit id elit sagittis laoreet vitae at mi.
-            a.enroll-button(href='#') Enroll
+            button.enroll-button Enroll
         .card
           img(src='/images/588.png' alt='Image 1')
           .card-content
             h1 Mandarin App
             p
               | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel elit id elit sagittis laoreet vitae at mi.
-            a.enroll-button(href='#') Enroll
+            button.enroll-button Enroll
+
   section#call-to-action
     .container
       h2 Discover the Future with GPTDAO
@@ -200,7 +207,23 @@ html
           h3 Investment in Tomorrow
           p Contribute to the development of advanced software and hardware that will power the world of tomorrow, creating opportunities for everyone to benefit from technological advancements.
 
-  
+#routeNotDefinedModal.routeNotDefinedModal
+        .routeNotDefinedModal-content
+          span.routeNotDefinedModal-close &times;
+          .routeNotDefined-Modal-content-container
+            img(src="/images/562.png", alt="Work in progress")
+            h2 This route is not yet defined
+            p
+              | At GPTDAO, we believe in the strength of our global community. While this is a vast project,
+              | the combined efforts of our dedicated contributors make it possible to overcome any challenge.
+              | We deeply value each and every individual who joins us on this journey.
+              |
+              | The page you are looking for is currently under construction, a sign of our continuous growth and development.
+              | We apologize for any inconvenience, and appreciate your understanding and patience.
+              |
+              | Remember, every individual makes a difference in GPTDAO. With collective effort,
+              | we are not just building faster - we are building stronger.
+              | Thank you for being a part of this exciting journey.
 
   
 include _footer
@@ -400,7 +423,7 @@ div.overlay
         .modal-footer
           button.btn.btn-cancel(type="button" data-dismiss="modal") Close
 
-  
+ 
     //- script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js')
     //- script(src='/js/mapbox.js')
     //- script(src='/js/login.js')
