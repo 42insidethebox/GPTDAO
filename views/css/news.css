@@ -198,11 +198,6 @@ img {
 }
 
 /* Media Queries */
-@media (max-width: 1200px) {
-  .container {
-    padding: 0 1rem;
-  }
-}
 
 @media (max-width: 992px) {
   .col-md-3 {
@@ -276,4 +271,18 @@ img {
 
 #save-news:hover {
   background-color: #eee;
+}
+
+@media (max-width: 1300px) {
+  .div-2-cols {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  #sidebar {
+    max-width: 100%;
+  }
+
+  .news-card {
+    grid-template-columns: 1fr 1fr !important;
+  }
 }

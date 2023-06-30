@@ -25,20 +25,21 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Define helper functions at the top of the file
-  function populateTable(proposals) {
-    console.log(
-      "populateTable has been called with these proposals:",
-      proposals
-    );
+  if (document.getElementById("proposal-tbody-container")) {
+    function populateTable(proposals) {
+      console.log(
+        "populateTable has been called with these proposals:",
+        proposals
+      );
 
-    const tbody = document.getElementById("proposal-tbody-container");
-    tbody.innerHTML = ""; // Clear the current rows
-    proposals.forEach((proposal, index) => {
-      console.log(`Processing proposal at index ${index}:`, proposal);
-      console.log(proposal._id);
-      const tr = document.createElement("tr");
-      tr.setAttribute("id", `proposal-${proposal._id}`); // Set the proposal id as an attribute on the tr element
-      tr.innerHTML = `
+      const tbody = document.getElementById("proposal-tbody-container");
+      tbody.innerHTML = ""; // Clear the current rows
+      proposals.forEach((proposal, index) => {
+        console.log(`Processing proposal at index ${index}:`, proposal);
+        console.log(proposal._id);
+        const tr = document.createElement("tr");
+        tr.setAttribute("id", `proposal-${proposal._id}`); // Set the proposal id as an attribute on the tr element
+        tr.innerHTML = `
       <td class="date">${proposal.date}</td>
       <td class="proposal-name">
         <a href="#">${proposal.title}</a> 
@@ -52,152 +53,153 @@ document.addEventListener("DOMContentLoaded", function () {
       </td>
     `;
 
-      // Adding click event to each row
-      tr.addEventListener("click", () => {
-        openProposalModal(proposal._id);
-      });
+        // Adding click event to each row
+        tr.addEventListener("click", () => {
+          openProposalModal(proposal._id);
+        });
 
-      tbody.appendChild(tr);
+        tbody.appendChild(tr);
 
-      const proposalmodal = document.querySelector(".proposal-modal");
-      var proposalNames = document.querySelectorAll(".proposal-name");
+        const proposalmodal = document.querySelector(".proposal-modal");
+        var proposalNames = document.querySelectorAll(".proposal-name");
 
-      var proposalNames = document.querySelectorAll(".proposal-name");
+        var proposalNames = document.querySelectorAll(".proposal-name");
 
-      proposalNames.forEach(function (proposalName) {
-        proposalName.addEventListener("click", function () {
-          proposalmodal.style.display = "block";
-          proposalmodal.style.top = "0";
+        proposalNames.forEach(function (proposalName) {
+          proposalName.addEventListener("click", function () {
+            proposalmodal.style.display = "block";
+            proposalmodal.style.top = "0";
 
-          setTimeout(() => {
-            document
-              .querySelector("#proposal-modal")
-              .scrollIntoView({ behavior: "smooth" });
-          }, 50);
+            setTimeout(() => {
+              document
+                .querySelector("#proposal-modal")
+                .scrollIntoView({ behavior: "smooth" });
+            }, 50);
+          });
         });
       });
-    });
+      document
+        .querySelector(".close-proposal-modal")
+        .addEventListener("click", function () {
+          document
+            .querySelector(".governance-feature")
+            .scrollIntoView({ behavior: "smooth" });
+          closeProposalModal();
+        });
+    }
+
+    function openProposalModal(id) {
+      fetch(`/api/v1/proposals/${id}`)
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          return response.json();
+        })
+        .then((proposal) => {
+          // populate modal fields with proposal data
+          document.getElementById("view-proposal-type").innerText =
+            proposal.proposalType;
+          document.getElementById("view-proposal-title").innerText =
+            proposal.title;
+          document.getElementById("view-proposal-description").innerText =
+            proposal.description;
+          document.getElementById("view-proposal-audience").innerText =
+            proposal.targetAudience;
+          document.getElementById("view-proposal-status").innerText =
+            proposal.currentStatus;
+          document.getElementById("view-proposal-kpi").innerText =
+            proposal.kpis.join(", ");
+          document.getElementById("view-proposal-risks").innerText =
+            proposal.risksAndChallenges.join(", ");
+          document.getElementById("view-proposal-dependencies").innerText =
+            proposal.dependencies.join(", ");
+          document.getElementById("view-proposal-ownership").innerText =
+            proposal.ownershipAndGovernance;
+          document.getElementById("view-proposal-ip").innerText =
+            proposal.intellectualPropertyRights;
+          document.getElementById("view-proposal-nda").innerText =
+            proposal.confidentialityAgreement;
+          document.getElementById("view-proposal-social-impact").innerText =
+            proposal.socialImpact;
+          document.getElementById("view-proposal-diversity").innerText =
+            proposal.diversityInclusion;
+          document.getElementById("view-proposal-link").innerText =
+            proposal.link;
+          document.getElementById("view-proposal-budget").innerText =
+            proposal.budget;
+          // Open modal
+        })
+        .catch((error) => console.error("Error:", error));
+    }
+
+    // Then handle events like window.onload
+    window.onload = function () {
+      fetch("/api/v1/proposals") // Ensure this is the correct endpoint
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          return response.json();
+        })
+        .then((data) => populateTable(data))
+        .catch((error) => console.error("Error:", error));
+    };
+
+    function populateReportContent(report) {
+      document.getElementById(
+        "tokens-sold"
+      ).textContent = `Tokens Sold: ${report.revenue.tokenSales.numberOfTokensSold}`;
+      document.getElementById(
+        "token-price"
+      ).textContent = `Price per Token: ${report.revenue.tokenSales.pricePerToken}`;
+      document.getElementById(
+        "total-revenue"
+      ).textContent = `Total Revenue: ${report.revenue.totalRevenue}`;
+      document.getElementById(
+        "total-expenses"
+      ).textContent = `Total Expenses: ${report.expenses.totalExpenses}`;
+      document.getElementById(
+        "total-profit-loss"
+      ).textContent = `Profit/Loss: ${report.profitLoss}`;
+    }
+
+    let reports = [];
+
+    function populateMonthSelect(reportData) {
+      reports = reportData;
+      const reportMonthSelect = document.getElementById("report-month");
+
+      reports.forEach((report) => {
+        const option = document.createElement("option");
+        option.value = report.month;
+        option.text = report.month;
+        reportMonthSelect.add(option);
+      });
+
+      populateReportContent(reports[0]); // Populate content for the first month initially
+    }
+
     document
-      .querySelector(".close-proposal-modal")
-      .addEventListener("click", function () {
-        document
-          .querySelector(".governance-feature")
-          .scrollIntoView({ behavior: "smooth" });
-        closeProposalModal();
+      .getElementById("report-month")
+      .addEventListener("change", function () {
+        const selectedMonth = this.value;
+        const selectedReport = reports.find(
+          (report) => report.month === selectedMonth
+        );
+        populateReportContent(selectedReport);
+      });
+
+    // In your fetch call...
+    fetch("/api/v1/reports")
+      .then((response) => response.json())
+      .then((data) => {
+        populateMonthSelect(data.reports);
+      })
+      .catch((error) => {
+        console.error("Error:", error);
       });
   }
-
-  function openProposalModal(id) {
-    fetch(`/api/v1/proposals/${id}`)
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        return response.json();
-      })
-      .then((proposal) => {
-        // populate modal fields with proposal data
-        document.getElementById("view-proposal-type").innerText =
-          proposal.proposalType;
-        document.getElementById("view-proposal-title").innerText =
-          proposal.title;
-        document.getElementById("view-proposal-description").innerText =
-          proposal.description;
-        document.getElementById("view-proposal-audience").innerText =
-          proposal.targetAudience;
-        document.getElementById("view-proposal-status").innerText =
-          proposal.currentStatus;
-        document.getElementById("view-proposal-kpi").innerText =
-          proposal.kpis.join(", ");
-        document.getElementById("view-proposal-risks").innerText =
-          proposal.risksAndChallenges.join(", ");
-        document.getElementById("view-proposal-dependencies").innerText =
-          proposal.dependencies.join(", ");
-        document.getElementById("view-proposal-ownership").innerText =
-          proposal.ownershipAndGovernance;
-        document.getElementById("view-proposal-ip").innerText =
-          proposal.intellectualPropertyRights;
-        document.getElementById("view-proposal-nda").innerText =
-          proposal.confidentialityAgreement;
-        document.getElementById("view-proposal-social-impact").innerText =
-          proposal.socialImpact;
-        document.getElementById("view-proposal-diversity").innerText =
-          proposal.diversityInclusion;
-        document.getElementById("view-proposal-link").innerText = proposal.link;
-        document.getElementById("view-proposal-budget").innerText =
-          proposal.budget;
-        // Open modal
-      })
-      .catch((error) => console.error("Error:", error));
-  }
-
-  // Then handle events like window.onload
-  window.onload = function () {
-    fetch("/api/v1/proposals") // Ensure this is the correct endpoint
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        return response.json();
-      })
-      .then((data) => populateTable(data))
-      .catch((error) => console.error("Error:", error));
-  };
-
-  function populateReportContent(report) {
-    document.getElementById(
-      "tokens-sold"
-    ).textContent = `Tokens Sold: ${report.revenue.tokenSales.numberOfTokensSold}`;
-    document.getElementById(
-      "token-price"
-    ).textContent = `Price per Token: ${report.revenue.tokenSales.pricePerToken}`;
-    document.getElementById(
-      "total-revenue"
-    ).textContent = `Total Revenue: ${report.revenue.totalRevenue}`;
-    document.getElementById(
-      "total-expenses"
-    ).textContent = `Total Expenses: ${report.expenses.totalExpenses}`;
-    document.getElementById(
-      "total-profit-loss"
-    ).textContent = `Profit/Loss: ${report.profitLoss}`;
-  }
-
-  let reports = [];
-
-  function populateMonthSelect(reportData) {
-    reports = reportData;
-    const reportMonthSelect = document.getElementById("report-month");
-
-    reports.forEach((report) => {
-      const option = document.createElement("option");
-      option.value = report.month;
-      option.text = report.month;
-      reportMonthSelect.add(option);
-    });
-
-    populateReportContent(reports[0]); // Populate content for the first month initially
-  }
-
-  document
-    .getElementById("report-month")
-    .addEventListener("change", function () {
-      const selectedMonth = this.value;
-      const selectedReport = reports.find(
-        (report) => report.month === selectedMonth
-      );
-      populateReportContent(selectedReport);
-    });
-
-  // In your fetch call...
-  fetch("/api/v1/reports")
-    .then((response) => response.json())
-    .then((data) => {
-      populateMonthSelect(data.reports);
-    })
-    .catch((error) => {
-      console.error("Error:", error);
-    });
-
   const burger = document.getElementById("burger");
   const nav = document.getElementById("nav");
   const containerDropdown = document.querySelector(".container-dropdown");

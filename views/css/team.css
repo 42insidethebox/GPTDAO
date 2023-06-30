@@ -40,3 +40,9 @@ p {
   margin-bottom: 10px;
   line-height: 1.5;
 }
+
+@media (max-width: 800px) {
+  .team-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
